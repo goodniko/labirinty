@@ -63,7 +63,7 @@
 
 /* Transitions and class for reduced height */
 .cbp-af-header h1,
-
+.cbp-af-header img,
 .cbp-af-header nav a {
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
@@ -89,9 +89,9 @@
 }
 
 .cbp-af-header.cbp-af-header-shrink img {
-	width: 1.5em;
 	position: relative;
 	top: -1px;
+
 }
 
 /* Example Media Queries */
@@ -109,8 +109,7 @@
 
 	.cbp-af-header img {
 		width: 1em;
-		position: relative;
-		top: 4px;
+
 	}
 
 	.cbp-af-header h1{
@@ -135,9 +134,9 @@
 	}
 
 	.cbp-af-header.cbp-af-header-shrink img {
-		width: 1.3em;
-		position: relative;
-		top: 5px;
+		width: 1.1em;
+		
+
 	}
 	.cbp-af-header.cbp-af-header-shrink img,
 	.cbp-af-header.cbp-af-header-shrink h1,

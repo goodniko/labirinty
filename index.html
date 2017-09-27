@@ -2,19 +2,20 @@
 <html>
     <head>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
         <link rel="stylesheet" type="text/css" href="stylesheet/style.css" />
         <link rel="stylesheet" type="text/css" href="stylesheet/component.css" />
-        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <title>Лабиринты - квест-комнаты Одессы</title>
     </head>
     <body>
 		<div class="cbp-af-header">
             <div class="cbp-af-inner">
-                <h1><img src="image/logo2.png" width="47em" style="padding-right: 10px;">Лабиринты</h1>
+                <h1><img src="image/logo2.png" width="40em" style="margin-right: 10px;">Лабиринты</h1>
                 <nav>
                     <a href="#главная">Главная</a>
                     <a href="#квесты">Квесты</a>
@@ -24,42 +25,43 @@
                 </nav>
             </div>
         </div>
-        <header></header>
-        <section id='home' class='pt-section'>
+
+        <div id='home' class='pt-section container-fluid'>
             <a href='#главная' name='главная'></a>
-            <div class="lab-view">
-                <div id="lab-view-img1">
+            <div class="lab-view row">
+                <div class="col-md-1"></div>
+                <div class="col-md-2 col-sm-4 col-xs-6 ">
                     <h5 class="lab-view-title">Соберите команду</h5>
-                    <img src="image/team.png" width="150px">
+                    <img src="image/team1.png" width="100px">
                     <div class="lab-view-text">Для игры не потребуется сила и эрудиция, но не обойтись без команды от 2 до 4 человек</div>
                 </div>
-                <div id="lab-view-img2">
+                <div class="col-md-2 col-sm-4 col-xs-6 col-md-offset-2">
                     <h5 class="lab-view-title">Ищите подсказки</h5>
-                    <img src="image/eye.png" width="150px">
+                    <img src="image/eye2.png" width="100px">
                     <div class="lab-view-text">Вы будете заперты - начните с внимательного осмотра комнаты вокруг себя</div>
                 </div>
-                <div id="lab-view-img3">
-                    <h5 class="lab-view-title">Решайте головоломки</h5>
-                    <img src="image/brain.png" width="150px">
+                <div class="col-md-2 col-sm-4 col-xs-6">
+                    <h5 class="lab-view-title">Решайте задачи</h5>
+                    <img src="image/brain1.png" width="100px">
                     <div class="lab-view-text">Решение загадок приблизит вас к ответу на главный вопрос "Как выбраться из комнаты?"</div>
                 </div>
-                <div id="lab-view-img4">
+                <div class="col-md-2 col-sm-4 col-xs-6">
                     <h5 class="lab-view-title">Помните о времени</h5>
-                    <img src="image/time.png" width="150px">
+                    <img src="image/time2.png" width="100px">
                     <div class="lab-view-text">В вашем расположении 60 минут. И они пролетят незаметно.</div>
                     
                 </div>
-                <div id="lab-view-img5">
+                <div class="col-md-2 col-sm-4 col-xs-6">
                     <h5 class="lab-view-title">Откройте дверь</h5>
-                    <img src="image/lock.png" width="150px">
+                    <img src="image/door1.png" width="100px">
                     <div class="lab-view-text">От победы вас отделяет лишь одна дверь, осталось только открыть ее</div>
                 </div>
-
+                <div class="col-md-1"></div>
             </div>
-        </section>
-        <section id='quests' class='pt-section'>
+        </div>
+        <!--<section id='quests' class='pt-section container'>
             <a href='#квесты' name='квесты'></a>
-            <div class="lab-quests">
+            <div class="lab-quests ">
                 <div class="col-quests">
                     <h3>ХРАМ СОЛНЦА</h3>
                     <p>Сеть квест-комнат «Лабиринты» приняла участие в археологических исследованиях и, 
@@ -103,7 +105,48 @@
                 </div>
             </div>
         </section>
-        
+    -->
+        <div id='quests' class='pt-section'>
+            <a href='#квесты' name='квесты'></a>
+            <div class="panel-group container-fluid" id="collapse-group">
+                <div class="panel panel-default row">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <a data-toggle="collapse" data-parent="#collapse-group" href="#el1">
+                                <img src="image/sun.jpg">
+                            </a>
+                        </div>
+                    </div>
+                    <div id="el1" class="panel-collapse collapse in">
+                        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                    </div>
+                </div>
+                <div class="panel panel-default row">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#collapse-group" href="#el2">Второй элемент</a>
+                        </h4>
+                    </div>
+                    <div id="el2" class="panel-collapse collapse">
+                        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                    </div>
+                </div>
+                <div class="panel panel-default row">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#collapse-group" href="#el3">Третий элемент</a>
+                        </h4>
+                    </div>
+                    <div id="el3" class="panel-collapse collapse">
+                        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+
         <section id='gallery' class='pt-section'>
             <a href='#галерея' name='галерея'></a>
             <div>фотки</div>

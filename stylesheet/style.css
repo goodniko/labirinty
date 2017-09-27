@@ -2,43 +2,47 @@ body {
     font-family: sans-serif;
     margin: 0px auto;
     background: #424242;
-    color: #F6F6F6;
+    color: #eeeee0;
     overflow-x: hidden;
+    
 }
 .pt-section {
-    height: 100vh;
+
   }
-#quests {
-    height: 200vh;
+.container {
+
 }
 #home {
+    min-height: 100vh;
+    
     position: relative;
     top: 230px;
 }
-.lab-view {
-    width: 80vw;
-    display: inline-flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    position: relative;
-    top: 10vh;
-    text-align: center;
-    margin: 0 10vw;
+#quests {
+    background-color: #191919;
 }
-
-
-  .lab-view-title{
-      text-transform: uppercase;
-      position: relative;
-      bottom: 20px;
-  }
-  
-  .lab-view-text{
-     width: 150px;
-     position: relative;
-  }
-
-  .lab-quests {
+.lab-view {
+    position: relative;
+    top: 12vh;
+    line-height: 1.8em;
+    text-align: center;
+}
+.lab-view img {
+    display: block;
+    margin: 15px auto;
+}
+.lab-view-text {
+    line-height: 2;     
+    font-weight: lighter;
+}
+.lab-view-title{
+    text-transform: uppercase;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+}
+.lab-quests {
     -webkit-box-pack: center !important;
     -webkit-justify-content: center !important;
     -ms-flex-pack: center !important;
@@ -51,11 +55,9 @@ body {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin: 75px -15px;
-
     font-size: 17px;
     line-height: 1.7;
     font-weight: 300;
-    
   }
 .col-quests {
     -webkit-box-flex: 0;
@@ -68,7 +70,6 @@ body {
 }
   .img-card {
     max-width: 100%;
-
     display: grid;
     max-height: 30rem;
 }
@@ -85,4 +86,5 @@ body {
     -moz-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.7), 0 1px 0px rgba(0, 0, 0, 0.5); 
     box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.7), 0 1px 0px rgba(0, 0, 0, 0.5);
 }
+
 
