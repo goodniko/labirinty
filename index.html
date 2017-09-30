@@ -3,19 +3,22 @@
     <head>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-        <link rel="stylesheet" type="text/css" href="stylesheet/style.css" />
         <link rel="stylesheet" type="text/css" href="stylesheet/component.css" />
+        <link rel="stylesheet" type="text/css" href="stylesheet/quest.css" />
+        <link rel="stylesheet" type="text/css" href="stylesheet/style.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
+       
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+
         <title>Лабиринты - квест-комнаты Одессы</title>
     </head>
     <body>
-		<div class="cbp-af-header">
-            <div class="cbp-af-inner">
-                <h1><img src="image/logo2.png" width="40em" style="margin-right: 10px;">Лабиринты</h1>
+        <div class="container-fluid">
+		<div class="cbp-af-header row">
+            <div class="cbp-af-inner col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                <h1><img src="image/logo2.png" width="40px" style="margin-right: 10px;">Лабиринты</h1>
                 <nav>
                     <a href="#главная">Главная</a>
                     <a href="#квесты">Квесты</a>
@@ -25,10 +28,9 @@
                 </nav>
             </div>
         </div>
-
-        <div id='home' class='pt-section container-fluid'>
-            <a href='#главная' name='главная'></a>
-            <div class="lab-view row">
+        
+        <div id='home' class='row lab-view'>
+            <a href='#главная' name='главная'></a>               
                 <div class="col-md-1"></div>
                 <div class="col-md-2 col-sm-4 col-xs-6 ">
                     <h5 class="lab-view-title">Соберите команду</h5>
@@ -57,9 +59,8 @@
                     <div class="lab-view-text">От победы вас отделяет лишь одна дверь, осталось только открыть ее</div>
                 </div>
                 <div class="col-md-1"></div>
-            </div>
         </div>
-        <!--<section id='quests' class='pt-section container'>
+       <!-- <section id='quests' class='pt-section container'>
             <a href='#квесты' name='квесты'></a>
             <div class="lab-quests ">
                 <div class="col-quests">
@@ -106,55 +107,86 @@
             </div>
         </section>
     -->
-        <div id='quests' class='pt-section'>
-            <a href='#квесты' name='квесты'></a>
-            <div class="panel-group container-fluid" id="collapse-group">
-                <div class="panel panel-default row">
-                    <div class="panel-heading">
-                        <div class="panel-title">
-                            <a data-toggle="collapse" data-parent="#collapse-group" href="#el1">
-                                <img src="image/sun.jpg">
-                            </a>
-                        </div>
+            
+    <div id="quests">
+        <div class="row">
+            <div class="col-md-4 col-sm-6">
+                <div class="box">
+                    <div class="box-img">
+                        <img src="image/sun1.png" alt="Храм Солнца">
                     </div>
-                    <div id="el1" class="panel-collapse collapse in">
-                        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-                    </div>
-                </div>
-                <div class="panel panel-default row">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#collapse-group" href="#el2">Второй элемент</a>
-                        </h4>
-                    </div>
-                    <div id="el2" class="panel-collapse collapse">
-                        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-                    </div>
-                </div>
-                <div class="panel panel-default row">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#collapse-group" href="#el3">Третий элемент</a>
-                        </h4>
-                    </div>
-                    <div id="el3" class="panel-collapse collapse">
-                        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                    <div class="box-content">
+                        <h4 class="title">Храм Солнца</h4>
+                        <p class="description">
+                            Сеть квест-комнат «Лабиринты» приняла участие в археологических исследованиях и, 
+                            наконец-то, в октябре в Одессе открывается музей, посвященный самой таинственной 
+                            цивилизации всех времен! Экспонаты, хранящие загадки древнейшей нации, были привезены 
+                            со всего мира. Невероятное количество легенд и мифов окутывает остатки этого великого 
+                            и таинственного народа… или может это не мифы…? Добро пожаловать в «Храм Солнца»
+                        </p>
+                        <ul class="social-links">
+                            <li><a href="#" class="fa fa-qq"></a></li>
+                            <li><a href="#" class="fa fa-weibo"></a></li>
+                            <li><a href="#" class="fa fa-weixin"></a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </div>    
+           
+            <div class="col-md-4 col-sm-6">
+                <div class="box">
+                    <div class="box-img">
+                        <img src="image/taina-jungley1.png" alt="Тайна джунглей">
+                    </div>
+                    <div class="box-content">
+            <h4 class="title">Тайна джунглей</h4>
+            <p class="description">
+                    Ваша детская мечта стать знаменитым охотником за сокровищами начала воплощаться 
+                    в жизнь. Вам осталось совсем чуть-чуть до одного из величайших открытий в истории. 
+                    Как и любой искатель приключений, вы готовы на многое ради заветного сокровища, 
+                    которое превращает легенду в реальность. Но помните, помимо сокровищ, коварные 
+                    джунгли прячут в себе опасные ловушки, которые могут и вас превратить в легенду.
+            </p>
+            <ul class="social-links">
+            <li><a href="#" class="fa fa-qq"></a></li>
+            <li><a href="#" class="fa fa-weibo"></a></li>
+            <li><a href="#" class="fa fa-weixin"></a></li>
+            </ul>
+            </div>
+            </div>
+            </div>
+           
+            <div class="col-md-4 col-sm-6">
+            <div class="box">
+            <div class="box-img">
+            <img src="image/seven1.png" alt="Семь">
+            </div>
+            <div class="box-content">
+            <h4 class="title">Семь</h4>
+            <p class="description">Никто не знает насколько может перевернуться сознание человека после аварии. Даже самый милый
+                    и добрый человек может превраться в безжалостного маньяка. Хватит ли тебе смелости 
+                    покопаться в мозгах у серийного убийцы?</p>
+            <ul class="social-links">
+            <li><a href="#" class="fa fa-qq"></a></li>
+            <li><a href="#" class="fa fa-weibo"></a></li>
+            <li><a href="#" class="fa fa-weixin"></a></li>
+            </ul>
+            </div>
+            </div>
+            </div>
+           
+            </div>
+            </div> 
 
-        <section id='gallery' class='pt-section'>
+        <div id='gallery' class=''>
             <a href='#галерея' name='галерея'></a>
             <div>фотки</div>
-        </section>
-        <section id='review' class='pt-section'>
+        </div>
+        <div id='review' class=''>
             <a href='#отзывы' name='отзывы'></a>
             <div>суперкруто</div>
-        </section>
+        </div>
+        </div>
         <footer>
             <a href='#контакты' name='контакты'></a>
             <div class="social-contact">
@@ -166,5 +198,8 @@
 
         <script src="js/cbpAnimatedHeader.min.js"></script>
         <script src="js/classie.js"></script>
+
+        
+
     </body>    
 </html>
