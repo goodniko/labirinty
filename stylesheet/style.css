@@ -1,4 +1,5 @@
 html, body {
+    width: 100%;
     height: 100%;
 }
 body {
@@ -7,22 +8,13 @@ body {
     background: #424242;
     color: #eeeee0;
     font-size: 13px;
+    overflow-x: hidden;
 }
 
-.container-fluid {
-    margin: 0 auto;
-
-
-}
-.container-fluid .row {
-    margin: 0 auto;
-}
-#home, #quests, #gallery, #review {
+#home, #quests, #rg-gallery, #review {
     position: relative;
     top: 230px;
-}
-#home {
-    
+    margin: 0;
 }
 
 .lab-view {
@@ -91,4 +83,161 @@ body {
 } 
 **/
 
+#rg-gallery {	
+	overflow: hidden;
+    position: reletive;
+	left: -15px;
+    width: 99vw;
+    height: 210px;
+    border: 2px solid #81B841;
+    background-color: #424242;
 
+}
+
+#rg-gallery .gallery {
+    position: relative;
+    width: 90%;
+    top: 3px;
+    left: -54px;
+    overflow: hidden;
+
+}
+
+.gallery ul {
+    width: 9999px;
+    list-style: none; 
+    transition: margin-left 260ms;
+    font-size: 0;
+    
+}
+.gallery li {
+    left: -40px;
+    display: inline-block;
+    
+}
+.gallery img {
+    height: 200px;
+    width: auto;
+    display: block;
+    margin: 0px 2px;
+}
+.arrow-block {
+    width: 40px;
+    height: 100%;
+    background: #81B841;
+
+}
+.ab-prev {
+    position: relative;
+    left: -55px;
+}
+.ab-next {
+    position: relative;
+    right: 0px;
+}
+.arrow {
+    padding: 0;
+    width: 40px;
+    color: #eeeee0;
+    display: block;
+}
+
+  .svg-wrap {
+	position: absolute;
+	width: 0px;
+	height: 0px;
+	overflow: hidden;
+}
+.rg-gallery a.prev {
+    margin-left: 11px;
+}
+
+.rg-gallery a.next {
+    margin-left: -15px;
+}
+
+.rg-gallery a svg {
+	display: block;
+	margin: 0 auto;
+	padding: 0;
+}
+
+
+.rg-gallery a {
+	width: 40px;
+    height: 40px;
+    margin: auto;
+}
+
+.rg-gallery div a::before {
+
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	-webkit-transform: scale(0.9);
+	transform: scale(0.9);
+}
+
+.rg-gallery .icon-wrap {
+	position: relative;
+	display: block;
+	margin: 210% 0 0;
+	width: 100%;
+	height: 100%;
+}
+
+.rg-gallery a.next .icon-wrap {
+	-webkit-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+.rg-gallery .icon-wrap::before,
+.rg-gallery .icon-wrap::after {
+	position: absolute;
+	width: 3px;
+	height: 50%;
+	background: #eeeee0;
+	content: '';
+	-webkit-transition: -webkit-transform 0.3s, background-color 0.3s;
+	transition: transform 0.3s, background-color 0.3s;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.rg-gallery .icon-wrap::before {
+	-webkit-transform: translateX(-50%) rotate(30deg);
+	transform: translateX(-50%) rotate(30deg);
+	-webkit-transform-origin: 0 100%;
+	transform-origin: 0 100%;
+}
+
+.rg-gallery .icon-wrap::after {
+	top: 50%;
+	-webkit-transform: translateX(-50%) rotate(-30deg);
+	transform: translateX(-50%) rotate(-30deg);
+	-webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+
+
+}
+
+.rg-gallery a:hover::before {
+	opacity: 1;
+	-webkit-transform: scale(1);
+    transform: scale(1);
+
+}
+
+.rg-gallery a:hover .icon-wrap::before,
+.rg-gallery a:hover .icon-wrap::after {
+
+}
+
+.rg-gallery a:hover .icon-wrap::before {
+	-webkit-transform: translateX(-50%) rotate(45deg);
+	transform: translateX(-50%) rotate(45deg);
+}
+
+.rg-gallery a:hover .icon-wrap::after {
+	-webkit-transform: translateX(-50%) rotate(-45deg);
+    transform: translateX(-50%) rotate(-45deg);
+}
