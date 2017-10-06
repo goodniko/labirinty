@@ -164,5 +164,9 @@
 }
 @media screen and (max-width: 80em) {
     .slider {
-        padding: 50px 50px;
+        padding: 50px;
+}
+@media screen and (max-width: 32.25em) {
+    .slider {
+        padding: 30px;
 }
