@@ -11,12 +11,14 @@ body {
     overflow-x: hidden;
 }
 
-#home, #quests, #rg-gallery, #review {
+#home, #quests, #rg-gallery {
     position: relative;
     top: 230px;
     margin: 0;
 }
-
+#review {
+    margin-top: 50px;
+}
 .lab-view {
     text-align: center;
 }

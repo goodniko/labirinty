@@ -8,7 +8,7 @@
       margin: 10px auto;
       background: #343434;
       padding: 50px 100px;
-      box-shadow: 0px 28px 19px -30px rgba(0, 0, 0, .70);
+      box-shadow: 0px 20px 35px -25px rgba(0, 0, 0, .70);
   }
 
   .slick-slide {
@@ -22,7 +22,12 @@
   }
 
   .slick-slide img:hover {
-    box-shadow: 0px 0px 8px 1px #1B1B1B;
+    box-shadow: 0px 0px 8px 2px #1B1B1B;
+  }
+  img,
+  img:active, 
+  img:focus {
+    outline: none;
   }
 
   .slick-prev:before,
@@ -66,10 +71,8 @@
 .slick-list
 {
     position: relative;
-
     display: block;
     overflow: hidden;
-
     margin: 0;
     padding: 0;
 }
@@ -165,8 +168,10 @@
 @media screen and (max-width: 80em) {
     .slider {
         padding: 50px;
+    }
 }
 @media screen and (max-width: 32.25em) {
     .slider {
         padding: 30px;
+    }
 }

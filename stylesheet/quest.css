@@ -1,3 +1,9 @@
+button, 
+button:active, 
+button:focus {
+    outline: none;
+    cursor: pointer;
+}
 .box{
  margin: 50px 0;
  position: relative;
@@ -37,6 +43,8 @@
 .box .description{
  font-size: 14px;
  line-height: 24px;
+ overflow-y: auto;
+ height: 50%;
  color: #fff;
 }
 .box .title:after,
@@ -51,6 +59,9 @@
  margin: 0;
  padding: 0;
  list-style: none;
+ position: absolute;
+ bottom: 18px;
+ left: 18px;
 }
 .box .social-links li{
  display: inline-block;
@@ -63,6 +74,16 @@
 .box .social-links li a:hover{
  text-decoration: none;
  color: #fff;
+}
+.box button {
+    background: #81B841;
+    border: 0;
+    text-transform: uppercase;
+    color: #eeeee0;
+    padding: 10px 15px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
 }
 @media only screen and (max-width: 990px) {
  .box{ margin-bottom:20px; }
@@ -84,6 +105,18 @@
     font-size: 15px;
 
    }
+   .box button {
+    background: #81B841;
+    border: 0;
+    text-transform: uppercase;
+    color: #eeeee0;
+    padding: 5px 10px;
+    font-size: 12px;
+    position: absolute;
+    bottom: 7px;
+    margin: 0 auto;
+    outline: none;
+}
 }
 @media only screen and (max-width: 479px) {
  .box .box-content{ padding: 15px; }
