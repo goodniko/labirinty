@@ -33,12 +33,13 @@
   .slick-prev:before,
   .slick-next:before {
     color: black;
-  }
 
+  }
 
   .slick-slide {
     transition: all ease-in-out .3s;
     opacity: .9;
+    
   }
   
   .slick-active {

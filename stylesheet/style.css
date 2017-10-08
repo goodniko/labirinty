@@ -11,14 +11,12 @@ body {
     overflow-x: hidden;
 }
 
-#home, #quests, #rg-gallery {
+#home, #quests, .slider, #review {
     position: relative;
     top: 230px;
     margin: 0;
 }
-#review {
-    margin-top: 50px;
-}
+
 .lab-view {
     text-align: center;
 }
@@ -38,208 +36,228 @@ body {
     font-size: 15px;
 
 }
-/**
-.lab-quests {
-    -webkit-box-pack: center !important;
-    -webkit-justify-content: center !important;
-    -ms-flex-pack: center !important;
-    justify-content: center !important;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin: 75px -15px;
-    font-size: 17px;
-    line-height: 1.7;
-    font-weight: 300;
-  }
-.col-quests {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 41.666667%;
-    -ms-flex: 0 0 41.666667%;
-    flex: 0 0 41.666667%;
-    max-width: 41.666667%;
-    padding-right: 15px;
-    padding-left: 15px;
+/* Quest */
+button, 
+button:active, 
+button:focus {
+    outline: none;
+    cursor: pointer;
 }
-  .img-card {
-    max-width: 100%;
-    display: grid;
-    max-height: 30rem;
+.box{
+ margin: 50px 0;
+ position: relative;
+ perspective: 1000px;
 }
-.img-quests {
-    width: 100%;
-    height: auto;
-    -webkit-box-shadow: 0 10px 8px -9px rgba(0, 0, 0, 0.7), 0 1px 0px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 0 10px 8px -9px rgba(0, 0, 0, 0.7), 0 1px 0px rgba(0, 0, 0, 0.5);
-    box-shadow: 0 10px 8px -9px rgba(0, 0, 0, 0.7), 0 1px 0px rgba(0, 0, 0, 0.5); 
-    transition: all .3s cubic-bezier(.25,.8,.25,1);
+.box .box-img{
+ transform: rotateY(0);
+ transition: all 0.50s ease-in-out 0s;
 }
-.img-quests:hover{
-    -webkit-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.7), 0 1px 0px rgba(0, 0, 0, 0.5); 
-    -moz-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.7), 0 1px 0px rgba(0, 0, 0, 0.5); 
-    box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.7), 0 1px 0px rgba(0, 0, 0, 0.5);
-} 
-**/
-
-#rg-gallery {	
-	overflow: hidden;
-    position: reletive;
-	left: -15px;
-    width: 99vw;
-    height: 210px;
-    border: 2px solid #81B841;
-    background-color: #424242;
-
+.box:hover .box-img{
+ transform: rotateY(-90deg);
 }
-
-#rg-gallery .gallery {
-    position: relative;
-    width: 90%;
-    top: 3px;
-    left: -54px;
-    overflow: hidden;
-
+.box .box-img img{
+ width: 100%;
+ height: auto;
 }
-
-.gallery ul {
-    width: 9999px;
-    list-style: none; 
-    transition: margin-left 260ms;
-    font-size: 0;
-    
+.box .box-content{
+ width: 100%;
+ height: 100%;
+ position: absolute;
+ top: 0;
+ left: 0;
+ padding: 60px 20px;
+ text-align: center;
+ background: rgba(0,0,0,0.7);
+ transform: rotateY(90deg);
+ transition: all 0.50s ease-in-out 0s;
 }
-.gallery li {
-    left: -40px;
-    display: inline-block;
-    
+.box:hover .box-content{
+ transform: rotateY(0);
 }
-.gallery img {
-    height: 200px;
-    width: auto;
-    display: block;
-    margin: 0px 2px;
+.box .title{
+ font-size: 20px;
+ color: #fff;
+ text-transform: uppercase;
 }
-.arrow-block {
-    width: 40px;
-    height: 100%;
+.box .description{
+ font-size: 14px;
+ line-height: 24px;
+ overflow-y: auto;
+ height: 50%;
+ color: #fff;
+}
+.box .title:after,
+.box .description:after{
+ content: "";
+ width: 80%;
+ display: block;
+ border-bottom: 1px solid #fff;
+ margin: 15px auto;
+}
+.box .social-links{
+ margin: 0;
+ padding: 0;
+ list-style: none;
+ position: absolute;
+ bottom: 18px;
+ left: 18px;
+}
+.box .social-links li{
+ display: inline-block;
+ margin: 0 10px;
+}
+.box .social-links li a{
+ font-size: 20px;
+ color: #a6a6a6;
+}
+.box .social-links li a:hover{
+ text-decoration: none;
+ color: #fff;
+}
+.box button {
     background: #81B841;
-
-}
-.ab-prev {
-    position: relative;
-    left: -55px;
-}
-.ab-next {
-    position: relative;
-    right: 0px;
-}
-.arrow {
-    padding: 0;
-    width: 40px;
+    border: 0;
+    text-transform: uppercase;
     color: #eeeee0;
-    display: block;
+    padding: 10px 15px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+@media only screen and (max-width: 990px) {
+ .box{ margin-bottom:20px; }
+ .box .box-content{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 15px 15px;
+   }
+ .box .description{
+    font-size: 11px;
+    line-height: 14px;
+    overflow-y: auto;
+    height: 150px;
+   }
+   .box .title{
+    font-size: 15px;
+
+   }
+   .box button {
+    background: #81B841;
+    border: 0;
+    text-transform: uppercase;
+    color: #eeeee0;
+    padding: 5px 10px;
+    font-size: 12px;
+    position: absolute;
+    bottom: 7px;
+    margin: 0 auto;
+    outline: none;
+}
+}
+@media only screen and (max-width: 479px) {
+ .box .box-content{ padding: 15px; }
+ .box .description{
+    font-size: 12px;
+    line-height: 18px;
+    color: #fff;
+   }
+}
+/* Reviews */
+.img-circle {
+    border-radius: 50%;
+    margin: 0 auto;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, .5);
+    
 }
 
-  .svg-wrap {
-	position: absolute;
-	width: 0px;
-	height: 0px;
-	overflow: hidden;
+#review img {
+    margin: 0 auto;
+    position: relative;
+    top: -130px;
+    
 }
-.rg-gallery a.prev {
-    margin-left: 11px;
+#review {
+    margin: 100px auto 0;
 }
-
-.rg-gallery a.next {
-    margin-left: -15px;
-}
-
-.rg-gallery a svg {
-	display: block;
-	margin: 0 auto;
-	padding: 0;
+.review-content {
+    margin-top: 100px;
 }
 
-
-.rg-gallery a {
-	width: 40px;
-    height: 40px;
-    margin: auto;
+#review blockquote {
+    position: absolute;
+    top: 0px;
+    padding: 20px 10px 20px 70px;
+    margin-right: 15px;
+    background: #343434;
+    color: #eeeee0;
+    box-shadow: 0px 5px 10px -8px rgba(0, 0, 0, 1);
+}
+#review blockquote:before {
+    content: "\201C";
+    font-family: serif;
+    position: absolute;
+    top: 20px;
+    left: 13px;
+    color: #eeeee0;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #81B841;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 40px;    
+}
+#review blockquote::after {
+    content: "";
+    width: 4px;
+    background: #81B841;
+    position: absolute;
+    left: 50px;
+    top: 20px;
+    bottom: 20px;
+}
+#review footer {
+    padding-top: 10px;
+}
+#review cite {
+    font-style: normal;
+    font-size: 0.8em;
+    text-transform: uppercase;
 }
 
-.rg-gallery div a::before {
-
-	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
-	transition: transform 0.3s, opacity 0.3s;
-	-webkit-transform: scale(0.9);
-	transform: scale(0.9);
-}
-
-.rg-gallery .icon-wrap {
-	position: relative;
-	display: block;
-	margin: 210% 0 0;
-	width: 100%;
-	height: 100%;
-}
-
-.rg-gallery a.next .icon-wrap {
-	-webkit-transform: rotate(180deg);
-	transform: rotate(180deg);
-}
-
-.rg-gallery .icon-wrap::before,
-.rg-gallery .icon-wrap::after {
-	position: absolute;
-	width: 3px;
-	height: 50%;
-	background: #eeeee0;
-	content: '';
-	-webkit-transition: -webkit-transform 0.3s, background-color 0.3s;
-	transition: transform 0.3s, background-color 0.3s;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-}
-
-.rg-gallery .icon-wrap::before {
-	-webkit-transform: translateX(-50%) rotate(30deg);
-	transform: translateX(-50%) rotate(30deg);
-	-webkit-transform-origin: 0 100%;
-	transform-origin: 0 100%;
-}
-
-.rg-gallery .icon-wrap::after {
-	top: 50%;
-	-webkit-transform: translateX(-50%) rotate(-30deg);
-	transform: translateX(-50%) rotate(-30deg);
-	-webkit-transform-origin: 0 0;
-    transform-origin: 0 0;
-
+@media screen and (max-width: 950px) {
+    #home, #quests {
+		position: relative;
+		top: 160px;
+		margin: 0;
+    }
+    .top-review .review-content {
+        margin-bottom: 70px;
+    }
 
 }
 
-.rg-gallery a:hover::before {
-	opacity: 1;
-	-webkit-transform: scale(1);
-    transform: scale(1);
-
-}
-
-.rg-gallery a:hover .icon-wrap::before,
-.rg-gallery a:hover .icon-wrap::after {
-
-}
-
-.rg-gallery a:hover .icon-wrap::before {
-	-webkit-transform: translateX(-50%) rotate(45deg);
-	transform: translateX(-50%) rotate(45deg);
-}
-
-.rg-gallery a:hover .icon-wrap::after {
-	-webkit-transform: translateX(-50%) rotate(-45deg);
-    transform: translateX(-50%) rotate(-45deg);
+@media screen and (max-width: 500px) {
+    #home, #quests {
+		position: relative;
+		top: 100px;
+		margin: 0;
+    }
+    .box {
+        margin-top: 20px;
+    }
+    .slider, #review {
+        position: relative;
+        top: 120px;
+    }
+    .top-review .review-content {
+        margin-bottom: 50px;
+    }
+    .bot-review .review-content {
+        margin-bottom: 120px;
+    }
 }

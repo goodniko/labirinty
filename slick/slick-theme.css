@@ -11,7 +11,6 @@
     font-family: 'slick';
     font-weight: normal;
     font-style: normal;
-
     src: url('./fonts/slick.eot');
     src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
 }
@@ -21,58 +20,36 @@
 {
     font-size: 0;
     line-height: 0;
-
     position: absolute;
     top: 50%;
-
     display: block;
-
-    width: 20px;
-    height: 20px;
-    padding: 0;
-    -webkit-transform: translate(0, -50%);
-    -ms-transform: translate(0, -50%);
-    transform: translate(0, -50%);
-
-    cursor: pointer;
-
-    color: transparent;
-    border: none;
-    outline: none;
-    background: transparent;
+    width: 2rem;
+	height: 2rem;
+     padding: 0;
+    width: 2rem;
+	height: 2rem;
+	background: transparent;
+	border-top: .4rem solid #eeeee0;
+    border-right: .4rem solid #eeeee0;
+    border-left: none;
+    border-bottom: none;
+	box-shadow: 0 0 0 lightgray;
+	transition: all 200ms ease;
 }
-.slick-prev:hover,
-.slick-prev:focus,
-.slick-next:hover,
-.slick-next:focus
-{
-    color: transparent;
-    outline: none;
-    background: transparent;
-}
-.slick-prev:hover:before,
-.slick-prev:focus:before,
-.slick-next:hover:before,
-.slick-next:focus:before
-{
-    opacity: 1;
-}
-.slick-prev.slick-disabled:before,
-.slick-next.slick-disabled:before
-{
-    opacity: .25;
+.slick-prev {
+    left: 0;
+    transform: translate3d(0,-50%,0) rotate(-135deg);
 }
 
-.slick-prev:before,
-.slick-next:before
-{
-    font-family: 'slick';
-    font-size: 20px;
-    line-height: 1;
-    opacity: .75;
-    color: #eeeee0;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+.slick-next {
+    right: 0;
+    transform: translate3d(0,-50%,0) rotate(45deg);
+}
+.slick-prev:hover, 
+.slick-next:hover {
+    border-top: .4rem solid #eeeee0;
+    border-right: .4rem solid #eeeee0;
+    box-shadow: .2rem -.2rem 0 #81B841;
 }
 
 .slick-prev
@@ -120,14 +97,27 @@
     {
         right: 15px;
     }
+    .slick-prev,
+    .slick-next
+    {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    
 }
 @media screen and (max-width: 32.25em) {
     .slick-prev
     {
-        left: 8px;
+        left: 10px;
     }
     .slick-next
     {
-        right: 8px;
+        right: 10px;
+    }
+    .slick-prev,
+    .slick-next
+    {
+        width: 1rem;
+        height: 1rem;
     }
 }
