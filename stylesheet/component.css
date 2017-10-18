@@ -56,7 +56,7 @@
 
 .cbp-af-header nav a:hover {
 	text-decoration: none;
-	color: #C7F8B7;
+	color: rgb(219, 219, 219);
 }
 
 /* Transitions and class for reduced height */

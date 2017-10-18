@@ -9,75 +9,79 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
         crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="stylesheet/component.css" />
     <link rel="stylesheet" type="text/css" href="stylesheet/style.css" />
     <link rel="stylesheet" type="text/css" href="slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
-
+    <script src="js/common.js" type="text/javascript"></script>
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+    <!-- jQuery is required -->
     <title>Лабиринты - квест-комнаты Одессы</title>
 </head>
-
 <body>
-
     <div class="container-fluid content">
         <div class="cbp-af-header row">
             <div class="cbp-af-inner col-md-12 col-lg-12 col-sm-12 col-xs-12">
-                <h1><img src="image/logo2.png" width="40px" style="margin-right: 10px;">Лабиринты</h1>
+                <h1>
+                    <img src="image/logo2.png" width="40px" style="margin-right: 10px;">Лабиринты</h1>
                 <nav>
-                    <a href="#главная">Главная</a>
-                    <a href="#квесты">Квесты</a>
-                    <a href="#галерея">Галерея</a>
-                    <a href="#отзывы">Отзывы</a>
-                    <a href="#контакты">Контакты</a>
+                    <a href="#home">Главная</a>
+                    <a href="#quests">Квесты</a>
+                    <a href="#gallery">Галерея</a>
+                    <a href="#review">Отзывы</a>
+                    <a href="#contact">Контакты</a>
                 </nav>
             </div>
         </div>
 
-        <div id='home' class='row lab-view'>
-            <a href='#главная' name='главная'></a>
+        <div id="home" name="home" class='row lab-view'>
             <div class="col-md-1"></div>
             <div class="col-md-2 col-sm-4 col-xs-6 ">
-                <h5 class="lab-view-title">Соберите команду</h5>
+                <div class="lab-view-title h5">Соберите команду</div>
                 <img src="image/team1.png" width="100px">
                 <div class="lab-view-text">Для игры не потребуется сила и эрудиция, но не обойтись без команды от 2 до 4 человек</div>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 col-md-offset-2">
-                <h5 class="lab-view-title">Ищите подсказки</h5>
+                <div class="lab-view-title h5">Ищите подсказки</div>
                 <img src="image/eye2.png" width="100px">
                 <div class="lab-view-text">Вы будете заперты - начните с внимательного осмотра комнаты вокруг себя</div>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6">
-                <h5 class="lab-view-title">Решайте задачи</h5>
+                <div class="lab-view-title h5">Решайте задачи</div>
                 <img src="image/brain1.png" width="100px">
                 <div class="lab-view-text">Решение загадок приблизит вас к ответу на главный вопрос "Как выбраться из комнаты?"</div>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6">
-                <h5 class="lab-view-title">Помните о времени</h5>
+                <div class="lab-view-title h5">Помните о времени</div>
                 <img src="image/time2.png" width="100px">
                 <div class="lab-view-text">В вашем расположении 60 минут. И они пролетят незаметно.</div>
-
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6">
-                <h5 class="lab-view-title">Откройте дверь</h5>
+                <div class="lab-view-title h5">Откройте дверь</div>
                 <img src="image/door1.png" width="100px">
                 <div class="lab-view-text">От победы вас отделяет лишь одна дверь, осталось только открыть ее</div>
             </div>
             <div class="col-md-1"></div>
         </div>
 
-
-        <div id="quests">
-            <a href='#квесты' name='квесты'></a>
+        <div id="quests" name="quests">
             <div class="row">
                 <div class="col-md-4 col-sm-6">
                     <div class="box">
-                        <div class="box-img">
-                            <img src="image/sun1.png" alt="Храм Солнца">
+                        <div class="box-img box-inline">
+                            <img src="image/sun.jpg" alt="Храм Солнца">
+                            <div class="box-overlay">
+                                <h2>Храм Солнца
+                                    <span> (франшиза)</span>
+                                </h2>
+                                <p>Окунитесь в легенды и мифы древнейшей нации.</p>
+                            </div>
                         </div>
                         <div class="box-content">
-                            <h4 class="title">Храм Солнца</h4>
+                            <h2 class="title">Храм Солнца</h2>
                             <p class="description">
                                 Сеть квест-комнат «Лабиринты» приняла участие в археологических исследованиях и, наконец-то, в октябре в Одессе открывается
                                 музей, посвященный самой таинственной цивилизации всех времен! Экспонаты, хранящие загадки
@@ -87,21 +91,32 @@
                             </p>
                             <button>Забронировать</button>
                             <ul class="social-links">
-                                <li><a href="https://vk.com/labyrinthes_od" class="fa fa-vk" aria-hidden="true"></a></li>
-                                <li><a href="https://www.instagram.com/kvest_labirinty/" class="fa fa-instagram" aria-hidden="true"></a></li>
-                                <li><a href="https://www.facebook.com/labirinty.kvest" class="fa fa-facebook" aria-hidden="true"></a></li>
+                                <li>
+                                    <a href="https://vk.com/labyrinthes_od" class="fa fa-vk" aria-hidden="true"></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/kvest_labirinty/" class="fa fa-instagram" aria-hidden="true"></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.facebook.com/labirinty.kvest" class="fa fa-facebook" aria-hidden="true"></a>
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </div>
-
                 <div class="col-md-4 col-sm-6">
                     <div class="box">
-                        <div class="box-img">
-                            <img src="image/taina-jungley1.png" alt="Тайна джунглей">
+                        <div class="box-img box-inline">
+                            <img src="image/jungle1.jpg" alt="Тайна джунглей">
+                            <div class="box-overlay">
+                                <h2>Тайна Джунгелей
+                                    <span> (открыто)</span>
+                                </h2>
+                                <p>Осмельтесь зайти в джунгли ради сокровищ.</p>
+                            </div>
                         </div>
                         <div class="box-content">
-                            <h4 class="title">Тайна джунглей</h4>
+                            <h2 class="title">Тайна джунглей</h2>
                             <p class="description">
                                 Ваша детская мечта стать знаменитым охотником за сокровищами начала воплощаться в жизнь. Вам осталось совсем чуть-чуть до
                                 одного из величайших открытий в истории. Как и любой искатель приключений, вы готовы на многое
@@ -110,29 +125,46 @@
                             </p>
                             <button>Забронировать</button>
                             <ul class="social-links">
-                                <li><a href="https://vk.com/labyrinthes_od" class="fa fa-vk" aria-hidden="true"></a></li>
-                                <li><a href="https://www.instagram.com/kvest_labirinty/" class="fa fa-instagram" aria-hidden="true"></a></li>
-                                <li><a href="https://www.facebook.com/labirinty.kvest" class="fa fa-facebook" aria-hidden="true"></a></li>
+                                <li>
+                                    <a href="https://vk.com/labyrinthes_od" class="fa fa-vk" aria-hidden="true"></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/kvest_labirinty/" class="fa fa-instagram" aria-hidden="true"></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.facebook.com/labirinty.kvest" class="fa fa-facebook" aria-hidden="true"></a>
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </div>
-
                 <div class="col-md-4 col-sm-6">
                     <div class="box">
-                        <div class="box-img">
-                            <img src="image/seven1.png" alt="Семь">
+                        <div class="box-img box-inline">
+                            <img src="image/seven1.jpg" alt="Семь">
+                            <div class="box-overlay">
+                                <h2>Семь
+                                    <span> (в разработке)</span>
+                                </h2>
+                                <p>Ощутите переживания серийного убицы.</p>
+                            </div>
                         </div>
                         <div class="box-content">
-                            <h4 class="title">Семь</h4>
+                            <h2 class="title">Семь</h2>
                             <p class="description">Никто не знает насколько может перевернуться сознание человека после аварии. Даже самый милый
                                 и добрый человек может превраться в безжалостного маньяка. Хватит ли тебе смелости покопаться
                                 в мозгах у серийного убийцы?</p>
                             <button>Забронировать</button>
                             <ul class="social-links">
-                                <li><a href="https://vk.com/labyrinthes_od" class="fa fa-vk" aria-hidden="true"></a></li>
-                                <li><a href="https://www.instagram.com/kvest_labirinty/" class="fa fa-instagram" aria-hidden="true"></a></li>
-                                <li><a href="https://www.facebook.com/labirinty.kvest" class="fa fa-facebook" aria-hidden="true"></a></li>
+                                <li>
+                                    <a href="https://vk.com/labyrinthes_od" class="fa fa-vk" aria-hidden="true"></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/kvest_labirinty/" class="fa fa-instagram" aria-hidden="true"></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.facebook.com/labirinty.kvest" class="fa fa-facebook" aria-hidden="true"></a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -140,35 +172,69 @@
             </div>
         </div>
 
-        <section id="gallery" class="variable slider">
-            <a href='#галерея' name='галерея'></a>
-            <div><img src="image/thumbs/1th.jpg" /></div>
-            <div><img src="image/thumbs/2th.jpg" /></div>
-            <div><img src="image/thumbs/3th.jpg" /></div>
-            <div><img src="image/thumbs/4th.jpg" /></div>
-            <div><img src="image/thumbs/5th.jpg" /></div>
-            <div><img src="image/thumbs/6th.jpg" /></div>
-            <div><img src="image/thumbs/7th.jpg" /></div>
-            <div><img src="image/thumbs/8th.jpg" /></div>
-            <div><img src="image/thumbs/9th.jpg" /></div>
-            <div><img src="image/thumbs/10th.jpg" /></div>
-            <div><img src="image/thumbs/11th.jpg" /></div>
-            <div><img src="image/thumbs/12th.jpg" /></div>
-            <div><img src="image/thumbs/13th.jpg" /></div>
-            <div><img src="image/thumbs/14th.jpg" /></div>
-            <div><img src="image/thumbs/16th.jpg" /></div>
-            <div><img src="image/thumbs/17th.jpg" /></div>
-            <div><img src="image/thumbs/18th.jpg" /></div>
+        <section id="gallery" name="gallery" class="variable slider" uk-grid uk-lightbox="animation: scale">
+            <a class="uk-inline" href="image/gallery/1.jpg">
+                <img class="gallery-img" src="image/thumbs/1th.jpg" />
+            </a>
+            <a class="uk-inline" href="image/gallery/2.jpg">
+                <img class="gallery-img" src="image/thumbs/2th.jpg" />
+            </a>
+            <a class="uk-inline" href="image/gallery/3.jpg">
+                <img class="gallery-img" src="image/thumbs/3th.jpg" />
+            </a>
+            <a class="uk-inline" href="image/gallery/4.jpg">
+                <img class="gallery-img" src="image/thumbs/4th.jpg" />
+            </a>
+            <a class="uk-inline" href="image/gallery/5.jpg">
+                <img class="gallery-img" src="image/thumbs/5th.jpg" />
+            </a>
+            <a class="uk-inline" href="image/gallery/6.jpg">
+                <img class="gallery-img" src="image/thumbs/6th.jpg" />
+            </a>
+            <a class="uk-inline" href="image/gallery/7.jpg">
+                <img class="gallery-img" src="image/thumbs/7th.jpg" />
+            </a>
+            <a class="uk-inline" href="image/gallery/8.jpg">
+                <img class="gallery-img" src="image/thumbs/8th.jpg" />
+            </a>
+            <a class="uk-inline" href="image/gallery/9.jpg">
+                <img class="gallery-img" src="image/thumbs/9th.jpg" />
+            </a>
+            <a class="uk-inline" href="image/gallery/10.jpg">
+                <img class="gallery-img" src="image/thumbs/10th.jpg" />
+            </a>
+            <a class="uk-inline" href="image/gallery/11.jpg">
+                <img class="gallery-img" src="image/thumbs/11th.jpg" />
+            </a>
+            <a class="uk-inline" href="image/gallery/12.jpg">
+                <img class="gallery-img" src="image/thumbs/12th.jpg" />
+            </a>
+            <a class="uk-inline" href="image/gallery/13.jpg">
+                <img class="gallery-img" src="image/thumbs/13th.jpg" />
+            </a>
+            <a class="uk-inline" href="image/gallery/14.jpg">
+                <img class="gallery-img" src="image/thumbs/14th.jpg" />
+            </a>
+            <a class="uk-inline" href="image/gallery/15.jpg">
+                <img class="gallery-img" src="image/thumbs/15th.jpg" />
+            </a>
+            <a class="uk-inline" href="image/gallery/16.jpg">
+                <img class="gallery-img" src="image/thumbs/16th.jpg" />
+            </a>
+            <a class="uk-inline" href="image/gallery/17.jpg">
+                <img class="gallery-img" src="image/thumbs/17th.jpg" />
+            </a>
+            <a class="uk-inline" href="image/gallery/18.jpg">
+                <img class="gallery-img" src="image/thumbs/18th.jpg" />
+            </a>
         </section>
 
-        <section id='review'>
-            <a href='#отзывы' name='отзывы'></a>
+        <section id="review" name="review">
             <!-- <div>
                 <iframe width="960" height="480" src="https://www.youtube.com/embed/KDQOIiaKUoc" frameborder="0" allowfullscreen></iframe>
             </div> -->
             <div id="rev1" class="review-content">
                 <img src="image/thumbs/18th.jpg" class="img-circle">
-
                 <blockquote>
                     Были в Тайне джунглей - много ловушек, загадок. Но сокровище нам удалось найти. Остерегайтесь обезьяны :)
                     <footer>
@@ -176,11 +242,9 @@
                         <cite>Кузнечики</cite>
                     </footer>
                 </blockquote>
-
             </div>
             <div id="rev2" class="review-content">
                 <img src="image/thumbs/16th.jpg" class="img-circle">
-
                 <blockquote>
                     Комната поражает нестандартными заданиями, каждая деталь уместна, приятно было проходить, респект создателям.
                     <footer>
@@ -188,11 +252,9 @@
                         <cite>Древние греки</cite>
                     </footer>
                 </blockquote>
-
             </div>
             <div id="rev3" class="review-content">
                 <img src="image/thumbs/15th.jpg" class="img-circle">
-
                 <blockquote>
                     Сложная, но по-своему необычная комната. С дрезьями любим квесты такого типа. По ощущениям в результате - классная.
                     <footer>
@@ -200,11 +262,9 @@
                         <cite>Крепкие парни</cite>
                     </footer>
                 </blockquote>
-
             </div>
             <div id="rev4" class="review-content">
                 <img src="image/thumbs/9th.jpg" class="img-circle">
-
                 <blockquote>
                     Первый наш квест и нам очень понравилось. Все было продумано, загадки в меру сложные, ловушки срабатывали на ура. Саша оооооочень
                     приветлива и добра. После квеста остались хорошие эмоции :) Привили любовь к квестам :)
@@ -213,12 +273,9 @@
                         <cite>Дружина</cite>
                     </footer>
                 </blockquote>
-
             </div>
-
             <div id="rev5" class="review-content">
                 <img src="image/thumbs/2th.jpg" class="img-circle">
-
                 <blockquote>
                     Этот квест обеспечил нам классное настроение на несколько дней вперед. Ребята с большой фантазией подошли к вопросу, получилось
                     ярко, смешно и здорово. Просто ловишь кайф от каждой минуты прозождения.
@@ -227,9 +284,7 @@
                         <cite>Медведи</cite>
                     </footer>
                 </blockquote>
-
             </div>
-
             <div id="rev6" class="review-content">
                 <img src="image/thumbs/17th.jpg" class="img-circle">
                 <blockquote>
@@ -242,30 +297,34 @@
                 </blockquote>
             </div>
         </section>
-
-
     </div>
-        <footer class="footer">
-            <a href='#контакты' name='контакты'></a>
+
+    <footer class="footer row">
+        <div id="contact" name="contact" class="col-md-4">
             <div class="">
-                <a href='#главная'>главная</a>
-                <a href='#квесты'>квесты</a>
-                <a href='#галерея'>галерея</a>
-                <a href='#отзывы'>отзывы</a>
-                <a href='#контакты'>контакты</a>
-            </div>
-            <div class="contact">
-                <h5>+38 073 408 22 38</h5>
-                <h5>+38 099 408 22 38</h5>
-                <h5>ул.Екатериненская 33/3</h5>
-            </div>
+                <div class="h3">Контакты</div>
+                
+                <div class="phone"><i href="" uk-icon="icon: phone"></i>+38 073 408 22 38</div>
+                <div>+38 099 408 22 38</div>
+                
+                <div class="street"><i href="" uk-icon="icon: location"></i>ул.Екатериненская 33/3</div>
+                
+                <div><i href="" uk-icon="icon: mail"></i>labitinty@gmail.com</div>
 
-        </footer>
+            </div>
+        </div>
+        <div class="menu col-md-4">
 
+        </div>
+        <div class="col-md-4">
+
+        </div>
+    </footer>
 
     <script src="js/cbpAnimatedHeader.min.js"></script>
     <script src="js/classie.js"></script>
-
+    <script src="js/common.js"></script>
+    
     <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
     <script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript">
