@@ -1,8 +1,4 @@
 
-  * {
-    box-sizing: border-box;
-  }
-
   .slider {
       width: 100%;
       margin: 10px auto;
@@ -174,5 +170,11 @@
 @media screen and (max-width: 32.25em) {
     .slider {
         padding: 30px;
+    }
+}
+@media screen and (min-width: 1370px) {
+    .slider {
+        width: 70%;
+        margin: 0 auto;
     }
 }

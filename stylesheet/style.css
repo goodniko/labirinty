@@ -1,9 +1,9 @@
 html, body {
     width: 100%;
-    height: 100%;
+
 }
 body {
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0px auto;
     background: #424242;
     color: #eeeee0;
@@ -11,10 +11,13 @@ body {
     overflow-x: hidden;
 }
 
-#home, #quests, .slider, #review  {
+section {
     position: relative;
     top: 230px;
     margin: 0;
+}
+.container-fluid {
+    padding: 0;
 }
 
 /* Menu 
@@ -35,7 +38,7 @@ body {
 	
 }
 .cbp-af-header .cbp-af-inner {
-	width: 90%;
+	width: 100%;
 	max-width: 80em;
 	margin: 0 auto;
 	padding: 0 1.875em;	
@@ -115,7 +118,10 @@ body {
 	width: 33px;
 
 }
-
+.logo-img {
+    width: 40px;
+    margin-right: 10px;
+}
 /* Example Media Queries */
 @media screen and (max-width: 80em) {
 	#home {
@@ -187,7 +193,7 @@ body {
 	#home {
 		position: relative;
 		top: 100px;
-		margin: 0;
+		margin: 0 auto;
 	}
 	.cbp-af-header {
 		height: 110px;
@@ -223,11 +229,7 @@ body {
 }
 
 @media screen and (max-width: 400px) {
-	#home {
-		position: relative;
-		top: 110px;
-		margin: 0;
-	}
+	
 	.cbp-af-header nav a,
 	.cbp-af-header.cbp-af-header-shrink nav a {
 		line-height: 1;
@@ -249,6 +251,19 @@ body {
 
 .lab-view {
     text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    background: #343434;
+    padding: 40px 40px;
+    box-shadow: 0px 20px 35px -25px rgba(0, 0, 0, 1);
+    
+
+}
+.lab-view-item {
+    width: 200px;
+    margin: 0 15px;
 }
 .lab-view img {
     display: block;
@@ -278,9 +293,10 @@ button:focus {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    background: #424242;
 }
 .box{
- margin: 50px 0px;
+ margin: 50px 5px;
  position: relative;
  perspective: 1000px;
  max-width: 400px;
@@ -316,53 +332,57 @@ button:focus {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 
-  }
+}
+.box-img-flag {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    right: 0;
+}
 .box-overlay {
-    padding: 20px 30px ;
-    min-height: 50%;
+    padding: 20px 30px;
+    min-height: 40%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    position: absolute !important;
     background: rgba(0, 0, 0, 0.70);
+    position: absolute !important;
         bottom: 0;
         left: 0;
         right: 0;
 }
-.box-overlay h2 {
-    color: #81b841;
-    font-weight: 500;
-    letter-spacing: 1px;
-    padding: 10px 0;
-    margin: 0;
-    white-space: nowrap;
-}
-.box-overlay p {
-    font-size: 12px;
-    color: #eeeee0;
-    
-}
-.box-overlay h2 span {
-    font-size: 10px;
-    color: #b8b8b8;
-}
-.box:hover .box-content{
- transform: rotateY(0);
-}
-.box .title{
+.box-content-title{
  font-size: 20px;
  color: #fff;
  text-transform: uppercase;
 }
-.box .description{
+.box-overlay-title {
+    text-transform: uppercase;
+    color: #81b841;
+    letter-spacing: 1px;
+    line-height: 0.7;
+    padding: 15px 0 5px;
+    margin: 0;
+    white-space: nowrap;
+}
+.box-overlay p {
+    font-size: 14px;
+    color: #eeeee0;
+    margin: 10px 0 10px;
+    
+}
+.box:hover .box-content{
+ transform: rotateY(0);
+}
+.box .description-afterline{
  font-size: 14px;
  line-height: 24px;
  overflow-y: auto;
  height: 50%;
  color: #fff;
 }
-.box .title:after,
-.box .afterline:after{
+.box-content-title:after,
+.description-afterline:after{
  content: "";
  width: 80%;
  display: block;
@@ -389,7 +409,7 @@ button:focus {
  text-decoration: none;
  color: #fff;
 }
-.box button {
+.box-content-button {
     background: #81B841;
     border: 0;
     text-transform: uppercase;
@@ -399,7 +419,7 @@ button:focus {
     bottom: 10px;
     right: 10px;
 }
-.box button:hover {
+.box-content-button:hover {
     background: rgb(119, 172, 55)
 }
 .box .img-hand {
@@ -408,6 +428,49 @@ button:focus {
     bottom: 10px;
     opacity: 0;
 }
+.uk-animation-scale-up {
+    -webkit-animation-name: uk-fade-scale-02;
+    animation-name: uk-fade-scale-02;
+}
+.uk-transition-scale-up {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+}
+.uk-transition-toggle:hover .uk-transition-scale-up,
+.uk-transition-toggle.uk-hover .uk-transition-scale-up {
+    opacity: 1;
+    -webkit-transform: scale3d(1.1, 1.1, 1);
+    transform: scale3d(1.1, 1.1, 1);
+}
+[class*='uk-animation-'] {
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+  @-webkit-keyframes uk-fade-scale-02 {
+    0% {
+      opacity: 0;
+      -webkit-transform: scale(0.2);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: scale(1);
+    }
+  }
+  @keyframes uk-fade-scale-02 {
+    0% {
+      opacity: 0;
+      transform: scale(0.2);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
 @media only screen and (max-width: 990px) {
     .box{ margin-bottom:20px; }
     .box .box-content{
@@ -423,9 +486,7 @@ button:focus {
         max-height: 170px;
         overflow-y: auto;
     }
-    .box button {
-        padding: 5px 10px;
-    }
+
 }
 @media only screen and (max-width: 479px) {
     .box .box-content{ padding: 15px; }
@@ -705,6 +766,8 @@ button:focus {
 }
 .footer .footer-content-contact .phone {
     font-weight: 700;
+    display: flex;
+    flex-direction: column;
 }
 .footer .footer-content-contact div {
     display: flex;
@@ -723,8 +786,9 @@ button:focus {
 }
 .footer-content-franchise {
     text-decoration: underline;
-    text-decoration-style: dashed;
-    text-decoration-color: rgba(255, 255, 255, 0.5)
+    text-decoration-style: solid;
+    text-decoration-color: rgba(255, 255, 255, .7);
+    
 }
 .footer .footer-content-left img {
     margin: 10px;
@@ -892,6 +956,107 @@ button:focus {
     text-align: right !important;
 }
 
+
+
+/* Booking modal 
+=============================================================*/
+.modal-booking .uk-modal-dialog {
+    width: 300px;
+    padding: 30px 30px 10px;
+
+}
+.modal-booking form{
+    display: block;
+}
+.modal-booking-title {
+    font-size: 26px;
+    color: #81b841;
+    padding: 5px 0px 20px;
+    text-transform: uppercase;
+}
+.modal-booking .box-content-button {
+    width: 240px;
+    position: relative;
+    left: 0;
+    margin: 10px 0 0;
+}
+
+.modal-booking form label {
+    position: relative;
+    display: block;
+}
+.modal-booking form label input {
+    box-sizing: border-box;
+    display: block;
+    border: none;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    width: 100%;
+    outline: none;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.modal-booking form label input::-webkit-input-placeholder {
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    color: #999;
+}
+.modal-booking form label input::-moz-placeholder {
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    color: #999;
+}
+.modal-booking form label input:-ms-input-placeholder {
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    color: #999;
+}
+.modal-booking form label input::placeholder {
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    color: #999;
+}
+.modal-booking form label input:focus, form label input.populated {
+    padding-top: 28px;
+    padding-bottom: 12px;
+}
+.modal-booking form label input:focus::-webkit-input-placeholder, form label input.populated::-webkit-input-placeholder {
+    color: transparent;
+}
+.modal-booking form label input:focus::-moz-placeholder, form label input.populated::-moz-placeholder {
+    color: transparent;
+}
+.modal-booking form label input:focus:-ms-input-placeholder, form label input.populated:-ms-input-placeholder {
+    color: transparent;
+}
+.modal-booking form label input:focus::placeholder, form label input.populated::placeholder {
+    color: transparent;
+}
+.modal-booking form label input:focus + span, form label input.populated + span {
+    opacity: 1;
+    top: 10px;
+}
+
+.modal-booking form label span {
+    color: #81b841;
+    font-size: 13px;
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.modal-booking form input[type="submit"] {
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+  
+
+
+
 @media screen and (max-width: 950px) {
     #home, #quests {
 		position: relative;
@@ -992,9 +1157,9 @@ button:focus {
 }
 
 @media screen and (min-width: 1370px) {
-    #home, #quests, #review, #gallery  {
+    section, .slider {
         width: 70%;
-        margin: auto;
+        margin: 0 auto;
     }
     #review {
         position: relative;
@@ -1002,7 +1167,7 @@ button:focus {
     }
     .cbp-af-header .cbp-af-inner {
         width: 100%;
-        max-width: 105em;
+        max-width: 100em;
     }
     .footer .footer-inner {
         width: 70%;
