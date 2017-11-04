@@ -1,6 +1,5 @@
 html, body {
     width: 100%;
-
 }
 body {
     font-family: 'Roboto', sans-serif;
@@ -10,11 +9,6 @@ body {
     font-size: 13px;
     overflow-x: hidden;
 }
-
-section {
-
-    margin: 0;
-}
 ul {
     -webkit-padding-start: 0;
     -webkit-padding-end: 0;
@@ -22,9 +16,7 @@ ul {
     -webkit-margin-after: 0;
     
 }
-.container-fluid {
-    padding: 0;
-}
+
 
 /* Menu 
 ================================================*/
@@ -517,7 +509,7 @@ ul {
         padding: 10px 15px 15px;
     }
     .lab-view-item {
-        margin: 0;
+        margin: 0 5px;
     }
 
 }
@@ -548,7 +540,7 @@ button:focus {
     background: #424242;
 }
 .box{
- margin: 20px 5px 40px;
+ margin: 20px 5px;
  position: relative;
  perspective: 1000px;
  max-width: 400px;
@@ -1223,26 +1215,35 @@ button:focus {
 /* Booking modal 
 =============================================================*/
 .modal-booking .uk-modal-dialog {
-    width: 300px;
+    width: 600px;
     padding: 30px 30px 10px;
-
+    text-align: center;
 }
 .modal-booking form{
     display: block;
 }
 .modal-booking-title {
-    font-size: 26px;
+    font-size: 40px;
     color: #81b841;
     padding: 5px 0px 20px;
     text-transform: uppercase;
+    font-weight: 700;
+}
+.modal-booking-title:after,
+.modal-booking label:last-child:after {
+    content: "";
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid #81b341;
+    margin: 25px auto 10px;
 }
 .modal-booking .box-content-button {
-    width: 240px;
+    width: 230px;
     position: relative;
-    left: 0;
-    margin: 10px 0 0;
+    right: 0;
+    margin: 15px 0 0;
+    font-weight: 600;
 }
-
 .modal-booking form label {
     position: relative;
     display: block;
@@ -1252,7 +1253,7 @@ button:focus {
     display: block;
     border: none;
     padding: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     font-size: 16px;
     width: 100%;
     outline: none;
@@ -1414,6 +1415,22 @@ button:focus {
     .box .seven{
         height: 120px;
     }
+}
+
+@media screen and (width: 1024px) {
+    .lab-view-item {
+        width: 170px;
+        margin: 0;
+    }
+    .box{
+        max-width: 320px;
+       }
+    .box-overlay h2 {
+        font-size: 1.5rem;
+    }   
+    .modal-booking .uk-modal-dialog {
+        width: 100%;
+    }        
 }
 @media screen and (max-width: 320px) {
     h2 {

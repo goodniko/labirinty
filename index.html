@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
         crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -16,14 +16,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="js/uikit.min.js"></script>
     <script src="js/uikit-icons.min.js"></script>
-    <script src="js/common.js"></script>    
+    <script src="js/common.js"></script>
     <script src="./slick/slick.js" charset="utf-8"></script>
     <!-- jQuery is required -->
     <title>Лабиринты - квест-комнаты Одессы</title>
 </head>
 
 <body>
-    <div class="container-fluid content">
+    <div class="content">
         <div class="menu">
             <header>
                 <img src="image/logo2.png" class="logo-img" alt="Лабиринты" />
@@ -36,14 +36,24 @@
             </header>
             <a href="#" class="menuBtn">
                 <span class="lines"></span>
-            </a>         
+            </a>
             <nav class="nav">
-                <ul>    
-                    <li><a href="#home" class="menu-link">Главная</a></li>
-                    <li><a href="#quests" class="menu-link">Квесты</a></li>
-                    <li><a href="#gallery" class="menu-link">Галерея</a></li>
-                    <li><a href="#review" class="menu-link">Отзывы</a></li>
-                    <li><a href="#contact" class="menu-link">Контакты</a></li>
+                <ul>
+                    <li>
+                        <a href="#home" class="menu-link">Главная</a>
+                    </li>
+                    <li>
+                        <a href="#quests" class="menu-link">Квесты</a>
+                    </li>
+                    <li>
+                        <a href="#gallery" class="menu-link">Галерея</a>
+                    </li>
+                    <li>
+                        <a href="#review" class="menu-link">Отзывы</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="menu-link">Контакты</a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -65,7 +75,7 @@
                 <div class="lab-view-text">Решение загадок приблизит вас к ответу на главный вопрос "Как выбраться из комнаты?"</div>
             </div>
             <div class="lab-view-item">
-                <div class="lab-view-title h5">Помните о времени</div>
+                <div class="lab-view-title h5">Берегите время</div>
                 <img src="image/time2.png" width="100">
                 <div class="lab-view-text">В вашем расположении 60 минут. И они пролетят незаметно.</div>
             </div>
@@ -103,7 +113,7 @@
                         великого и таинственного народа… или может это не мифы…? Добро пожаловать в «Храм Солнца»
                     </p>
                     <div class="description-afterline"></div>
-                    <button class="box-content-button" type="button" uk-toggle="target: #modal-booking-sun">Забронировать</button>
+                    <button class="box-content-button modal-booking-sun" type="button" uk-toggle="target: #modal-booking">Забронировать</button>
                     <ul class="social-links">
                         <li>
                             <a href="https://vk.com/labyrinthes_od" class="fa fa-vk" aria-hidden="true"></a>
@@ -115,26 +125,6 @@
                             <a href="https://www.facebook.com/labirinty.kvest" class="fa fa-facebook" aria-hidden="true"></a>
                         </li>
                     </ul>
-                </div>
-                <div id="modal-booking-sun" class="modal-booking" uk-modal>
-                    <div class="uk-modal-dialog uk-modal-body">
-                        <h2 class="modal-booking-title">Храм Солнца</h2>
-                        <form>
-                            <label>
-                                <input type="text" name="name" placeholder="Имя" required>
-                                <span>Имя</span>
-                            </label>
-                            <label>
-                                <input type="text" name="phone" placeholder="Телефон" required>
-                                <span>Телефон</span>
-                            </label>
-                            <label>
-                                <input type="email" name="email" placeholder="Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
-                                <span>Email</span>
-                            </label>
-                            <input class="box-content-button" type="submit" value="Бронировать">
-                        </form>
-                    </div>
                 </div>
             </div>
             <div class="box">
@@ -163,7 +153,7 @@
                         джунгли прячут в себе опасные ловушки, которые могут и вас превратить в легенду.
                     </p>
                     <div class="description-afterline"></div>
-                    <button class="box-content-button" type="button" uk-toggle="target: #modal-booking-jungle">Забронировать</button>
+                    <button class="box-content-button modal-booking-jungle" type="button" uk-toggle="target: #modal-booking">Забронировать</button>
                     <ul class="social-links">
                         <li>
                             <a href="https://vk.com/labyrinthes_od" class="fa fa-vk" aria-hidden="true"></a>
@@ -175,26 +165,6 @@
                             <a href="https://www.facebook.com/labirinty.kvest" class="fa fa-facebook" aria-hidden="true"></a>
                         </li>
                     </ul>
-                </div>
-                <div id="modal-booking-jungle" class="modal-booking" uk-modal>
-                    <div class="uk-modal-dialog uk-modal-body">
-                        <h2 class="modal-booking-title">Тайна джунглей</h2>
-                        <form>
-                            <label>
-                                <input type="text" name="name" placeholder="Имя" required>
-                                <span>Имя</span>
-                            </label>
-                            <label>
-                                <input type="text" name="phone" placeholder="Телефон" required>
-                                <span>Телефон</span>
-                            </label>
-                            <label>
-                                <input type="email" name="email" placeholder="Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
-                                <span>Email</span>
-                            </label>
-                            <input class="box-content-button" type="submit" value="Бронировать">
-                        </form>
-                    </div>
                 </div>
             </div>
             <div class="box">
@@ -222,7 +192,7 @@
                         убийцы?
                     </p>
                     <div class="description-afterline"></div>
-                    <button class="box-content-button" type="button" uk-toggle="target: #modal-booking-seven">Забронировать</button>
+                    <button class="box-content-button modal-booking-seven" type="button" uk-toggle="target: #modal-booking">Забронировать</button>
                     <ul class="social-links">
                         <li>
                             <a href="https://vk.com/labyrinthes_od" class="fa fa-vk" aria-hidden="true"></a>
@@ -235,17 +205,18 @@
                         </li>
                     </ul>
                 </div>
+            </div>
 
-                <div id="modal-booking-seven" class="modal-booking" uk-modal>
+            <div id="modal-booking" class="modal-booking" uk-modal>
                     <div class="uk-modal-dialog uk-modal-body">
-                        <h2 class="modal-booking-title">Семь</h2>
+                        <h2 class="modal-booking-title"></h2>
                         <form>
                             <label>
                                 <input type="text" name="name" placeholder="Имя" required>
                                 <span>Имя</span>
                             </label>
                             <label>
-                                <input type="text" name="phone" placeholder="Телефон" required>
+                                <input type="tel" id="phone" name="phone" placeholder="Телефон" required>
                                 <span>Телефон</span>
                             </label>
                             <label>
@@ -256,10 +227,10 @@
                         </form>
                     </div>
                 </div>
-            </div>
+
         </section>
 
-        <section id="gallery" class="variable slider" uk-grid uk-lightbox="animation: scale">
+        <section id="gallery" class="center slider" uk-grid uk-lightbox="animation: scale">
             <a class="uk-inline" href="image/gallery/1.jpg">
                 <img class="gallery-img" src="image/thumbs/1th.jpg" />
             </a>
@@ -530,14 +501,22 @@
     </footer>
 
 
-    
+
     <script>
         $(document).on('ready', function () {
-            $(".variable").slick({
+            $(".center").slick({
                 centerMode: true,
                 slidesToShow: 5,
                 infinite: true,
                 variableWidth: true,
+                responsive: [
+                    {
+                        breakpoint: 769,
+                        settings: {
+                            arrows: false,
+                        }
+                    }
+                ]
             });
         });
     </script>
