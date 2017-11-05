@@ -14,10 +14,12 @@ $(document).ready(function() {
 				scrollTop: $( $.attr(this, 'href') ).offset().top - 95
 			}, 800),
 			$(".nav").removeClass("act"),
+			$(".menuBtn").toggleClass("act"),
 			event.preventDefault()
 	}),
 	$(".menuBtn").on("click", function() {
-			$(".nav").toggleClass("act")
+			$(".nav").toggleClass("act");
+			$(".menuBtn").toggleClass("act");
 	});
 });
 
