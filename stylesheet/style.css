@@ -1732,3 +1732,10 @@ form label input.populated+span {
     color: #eeeee0;
     padding: 10px 15px;
 }
+
+@media screen and (max-width: 768px) {
+    .modal-booking .uk-modal-footer {
+        display: flex;
+        justify-content: center;
+    }
+}
