@@ -1033,16 +1033,13 @@ button:focus {
     padding: 15px 30px;
     background: #424242;
     color: #81B841;
-    border-bottom: 1px solid #81B841;
-    box-shadow: 0 7px 20px -8px rgba(0, 0, 0, .4);
-    
+    border-bottom: 1px solid #81B841;    
 }
 
 .uk-modal-footer {
     padding: 15px 30px;
     background: #424242;
     border-top: 1px solid #81b841;
-    box-shadow: 0 -10px 20px -9px rgba(0, 0, 0, .4);
 }
 
 .uk-modal-body::before,
@@ -1144,7 +1141,9 @@ button:focus {
     padding: 30px 0px 10px;
     text-align: center;
 }
-
+.modal-booking .uk-modal-body {
+    padding: 30px 30px 5px;
+}
 .modal-booking form {
     display: block;
 }
@@ -1159,7 +1158,7 @@ button:focus {
 .modal-booking .box-content-button {
     width: 230px;
     position: relative;
-    right: 15px;
+    right: 0px;
     margin: 17px 0 -15px;
     font-weight: 600;
 }
@@ -1722,10 +1721,13 @@ form label input.populated+span {
   }
 
 
+
 #reservationBody .box-content-button {
     background: #81B841;
-    width: 80px;
-    margin: 3px 5px;
+    width: 70px;
+    margin: 3px;
+    position: relative;
+    right: 0;
     text-transform: uppercase;
     color: #eeeee0;
     padding: 10px 15px;
