@@ -19,6 +19,7 @@
     <script src="js/uikit-icons.min.js"></script>
     <script src="js/common.js"></script>
     <script src="./slick/slick.js" charset="utf-8"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
     <script src="js/firebase-config.js"></script>
@@ -31,7 +32,7 @@
     <div class="content">
         <div class="header">
             <div class="header-inner">
-                    <header>
+                <header>
                     <a href="#home" class="menu-link">
                         <img src="image/logo2.png" class="logo-img" alt="Лабиринты" />
                     </a>
@@ -42,9 +43,11 @@
                         <span>Сеть квест-комнат</span>
                     </div>
                 </header>
+
                 <a href="#" class="menuBtn">
                     <span class="lines"></span>
                 </a>
+
                 <nav class="nav">
                     <ul>
                         <li>
@@ -136,6 +139,7 @@
                     </ul>
                 </div>
             </div>
+
             <div class="box">
                 <div class="box-img box-inline">
                     <img src="image/jungle.jpg" alt="Тайна джунглей">
@@ -176,6 +180,7 @@
                     </ul>
                 </div>
             </div>
+
             <div class="box">
                 <div class="box-img box-inline">
                     <img src="image/seven.jpg" alt="Семь" />
@@ -222,30 +227,32 @@
                     <div class="uk-modal-header">
                         <h2 id="orderingRoomTitle" class="modal-booking-title"></h2>
                     </div>
-                    <div class="uk-modal-body" uk-overflow-auto>
-                        <form>
+                    <form>
+                        <div class="uk-modal-body" uk-overflow-auto>
                             <label>
-                                <input id="fio" type="text" name="name" placeholder="Имя" required>
+                                <input id="fio" type="text" name="name" placeholder="Имя">
                                 <span>Имя</span>
                             </label>
                             <label>
-                                <input id="phone" type="tel" id="phone" name="phone" placeholder="Телефон" required>
+                                <input id="phone" type="tel" name="phone" placeholder="Телефон">
                                 <span>Телефон</span>
                             </label>
                             <label>
-                                <input id="email" type="email" name="email" placeholder="Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+                                <input id="email" type="email" name="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
                                 <span>Email</span>
                             </label>
                             <label>
-                                <input id="time" class="date-picker" data-provide="datepicker" placeholder="Время" required data-date-format="dd/mm/yyyy">
+                                <input id="time" class="date-picker" data-provide="datepicker" placeholder="Время" data-date-format="dd/mm/yyyy">
                                 <span>Время</span>
                             </label>
                             <div id="reservationBody"></div>
-                        </form>
-                    </div>
-                    <div class="uk-modal-footer uk-text-right">
-                        <button id="btnOrder" class="box-content-button" type="submit" value="Бронировать">Бронировать</button>
-                    </div>
+                        </div>
+                        <div class="uk-modal-footer uk-text-right">
+                            <button id="btnOrder" class="box-content-button" value="Бронировать">
+                                Бронировать
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>
@@ -321,6 +328,7 @@
                     </footer>
                 </blockquote>
             </div>
+
             <div id="rev2" class="review-content">
                 <img src="image/thumbs/16th.jpg" class="img-circle">
                 <blockquote>
@@ -331,6 +339,7 @@
                     </footer>
                 </blockquote>
             </div>
+
             <div id="rev3" class="review-content">
                 <img src="image/thumbs/15th.jpg" class="img-circle">
                 <blockquote>
@@ -341,6 +350,7 @@
                     </footer>
                 </blockquote>
             </div>
+
             <div id="rev4" class="review-content">
                 <img src="image/thumbs/9th.jpg" class="img-circle">
                 <blockquote>
@@ -352,6 +362,7 @@
                     </footer>
                 </blockquote>
             </div>
+
             <div id="rev5" class="review-content">
                 <img src="image/thumbs/2th.jpg" class="img-circle">
                 <blockquote>
@@ -363,6 +374,7 @@
                     </footer>
                 </blockquote>
             </div>
+
             <div id="rev6" class="review-content">
                 <img src="image/thumbs/17th.jpg" class="img-circle">
                 <blockquote>
@@ -414,8 +426,8 @@
                         <a href="https://www.facebook.com/labirinty.kvest" class="fa fa-facebook" aria-hidden="true"></a>
                     </li>
                 </ul>
-
             </div>
+
             <div class="footer-content footer-content-right">
                 <div>
                     <a href="#modal-franchise" class="footer-content-franchise" uk-toggle>Вы можете быть нашей франшизой</a>
@@ -543,7 +555,6 @@
             $(".date-picker").prop('readonly', true);
         });
 
-
         $("button[data-content]").click(function () {
             $("#orderingRoomTitle").text($(this).data("content"));
             $("#reservationBody").html("");
@@ -553,10 +564,6 @@
         $('.date-picker').datepicker({
             format: 'mm/dd/yyyy',
             startDate: '-3d',
-        });
-
-        $("#btnOrder").click(function () {
-
         });
 
         var selectOrderButton;
@@ -612,14 +619,23 @@
                             selectOrderButton = this;
 
                             this.style.backgroundColor = '#FFA000';
+
                         });
 
                         $("#reservationBody").append(button);
+
+                        $("#btnOrder").click(function () {
+                            swal({
+                                title: "Забронировано",
+                                text: selectRoom + ': ' + day + '/' + mounth + '/' + year + " " + snapshot.child(item.key).key + ' ' + snapshot.child(item.key).val() + "₴",
+                                icon: "success",
+                                button: "OK",
+                            });
+                        });
                     });
                 }
             });
         });
     </script>
 </body>
-
 </html>
