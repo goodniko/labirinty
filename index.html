@@ -3,24 +3,25 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+        crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
-    <script src="./js/firebase-config.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.js" />
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="stylesheet/style.css" />
     <link rel="stylesheet" type="text/css" href="slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="js/uikit.min.js"></script>
     <script src="js/uikit-icons.min.js"></script>
     <script src="js/common.js"></script>
     <script src="./slick/slick.js" charset="utf-8"></script>
     <script src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
+    <script src="js/firebase-config.js"></script>
 
     <!-- jQuery is required -->
     <title>Лабиринты - квест-комнаты Одессы</title>
@@ -28,38 +29,42 @@
 
 <body>
     <div class="content">
-        <div class="menu">
-            <header>
-                <img src="image/logo2.png" class="logo-img" alt="Лабиринты" />
-                <div class="logo">
-                    <h1>
-                        Лабиринты
-                    </h1>
-                    <span>Сеть квест-комнат</span>
-                </div>
-            </header>
-            <a href="#" class="menuBtn">
-                <span class="lines"></span>
-            </a>
-            <nav class="nav">
-                <ul>
-                    <li>
-                        <a href="#home" class="menu-link">Главная</a>
-                    </li>
-                    <li>
-                        <a href="#quests" class="menu-link">Квесты</a>
-                    </li>
-                    <li>
-                        <a href="#gallery" class="menu-link">Галерея</a>
-                    </li>
-                    <li>
-                        <a href="#review" class="menu-link">Отзывы</a>
-                    </li>
-                    <li>
-                        <a href="#contact" class="menu-link">Контакты</a>
-                    </li>
-                </ul>
-            </nav>
+        <div class="header">
+            <div class="header-inner">
+                    <header>
+                    <a href="#home" class="menu-link">
+                        <img src="image/logo2.png" class="logo-img" alt="Лабиринты" />
+                    </a>
+                    <div class="logo">
+                        <h1>
+                            Лабиринты
+                        </h1>
+                        <span>Сеть квест-комнат</span>
+                    </div>
+                </header>
+                <a href="#" class="menuBtn">
+                    <span class="lines"></span>
+                </a>
+                <nav class="nav">
+                    <ul>
+                        <li>
+                            <a href="#home" class="menu-link">Главная</a>
+                        </li>
+                        <li>
+                            <a href="#quests" class="menu-link">Квесты</a>
+                        </li>
+                        <li>
+                            <a href="#gallery" class="menu-link">Галерея</a>
+                        </li>
+                        <li>
+                            <a href="#review" class="menu-link">Отзывы</a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="menu-link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
 
         <section id="home" class='lab-view'>
@@ -111,8 +116,10 @@
                 <div class="box-content">
                     <h2 class="box-content-title">Храм Солнца</h2>
                     <p class="description">
-                        Сеть квест-комнат «Лабиринты» приняла участие в археологических исследованиях и, наконец-то, в октябре в Одессе открывается музей, посвященный самой таинственной цивилизации всех времен! Экспонаты, хранящие загадки древнейшей нации, были привезены со
-                        всего мира. Невероятное количество легенд и мифов окутывает остатки этого великого и таинственного народа… или может это не мифы…? Добро пожаловать в «Храм Солнца»
+                        Сеть квест-комнат «Лабиринты» приняла участие в археологических исследованиях и, наконец-то, в октябре в Одессе открывается
+                        музей, посвященный самой таинственной цивилизации всех времен! Экспонаты, хранящие загадки древнейшей
+                        нации, были привезены со всего мира. Невероятное количество легенд и мифов окутывает остатки этого
+                        великого и таинственного народа… или может это не мифы…? Добро пожаловать в «Храм Солнца»
                     </p>
                     <div class="description-afterline"></div>
                     <button class="box-content-button" data-content="Храм Солнца" type="button" uk-toggle="target: #modal-booking">Забронировать</button>
@@ -149,8 +156,10 @@
                 <div class="box-content">
                     <h2 class="box-content-title">Тайна джунглей</h2>
                     <p class="description">
-                        Ваша детская мечта стать знаменитым охотником за сокровищами начала воплощаться в жизнь. Вам осталось совсем чуть-чуть до одного из величайших открытий в истории. Как и любой искатель приключений, вы готовы на многое ради заветного сокровища, которое
-                        превращает легенду в реальность. Но помните, помимо сокровищ, коварные джунгли прячут в себе опасные ловушки, которые могут и вас превратить в легенду.
+                        Ваша детская мечта стать знаменитым охотником за сокровищами начала воплощаться в жизнь. Вам осталось совсем чуть-чуть до
+                        одного из величайших открытий в истории. Как и любой искатель приключений, вы готовы на многое ради
+                        заветного сокровища, которое превращает легенду в реальность. Но помните, помимо сокровищ, коварные
+                        джунгли прячут в себе опасные ловушки, которые могут и вас превратить в легенду.
                     </p>
                     <div class="description-afterline"></div>
                     <button class="box-content-button" type="button" data-content="Тайна джунглей" uk-toggle="target: #modal-booking">Забронировать</button>
@@ -180,17 +189,19 @@
                     </svg>
                     <div class="box-overlay">
                         <h2 class="box-overlay-title">Семь</h2>
-                        <p>Ощутите переживания серийного убицы.</p>
+                        <p>Ощутите переживания серийного убийцы.</p>
                         <img src="image/hand.png" class="img-hand" />
                     </div>
                 </div>
 
                 <div class="box-content">
                     <h2 class="box-content-title">Семь</h2>
-                    <p class="description seven">Никто не знает насколько может перевернуться сознание человека после аварии. Даже самый милый и добрый человек может превраться в безжалостного маньяка. Хватит ли тебе смелости покопаться в мозгах у серийного убийцы?
+                    <p class="description seven">Никто не знает насколько может перевернуться сознание человека после аварии. Даже самый милый и добрый
+                        человек может превраться в безжалостного маньяка. Хватит ли тебе смелости покопаться в мозгах у серийного
+                        убийцы?
                     </p>
                     <div class="description-afterline"></div>
-                    <button class="box-content-button" type="button" data-content="Семь" uk-toggle="target: #modal-booking">Забронировать</button>
+                    <button class="box-content-button" type="button" data-content="Семь" disabled style="background:#566148;">В разработке</button>
                     <ul class="social-links">
                         <li>
                             <a href="https://vk.com/labyrinthes_od" class="fa fa-vk" aria-hidden="true"></a>
@@ -206,33 +217,37 @@
             </div>
 
             <div id="modal-booking" class="modal-booking" uk-modal>
-                <div class="uk-modal-dialog uk-modal-body">
-                    <h2 id="orderingRoomTitle" class="modal-booking-title"></h2>
-                    <form>
-                        <label>
+                <div class="uk-modal-dialog ">
+                    <button class="uk-modal-close-default" type="button" uk-close></button>
+                    <div class="uk-modal-header">
+                        <h2 id="orderingRoomTitle" class="modal-booking-title"></h2>
+                    </div>
+                    <div class="uk-modal-body" uk-overflow-auto>
+                        <form>
+                            <label>
                                 <input id="fio" type="text" name="name" placeholder="Имя" required>
                                 <span>Имя</span>
                             </label>
-                        <label>
+                            <label>
                                 <input id="phone" type="tel" id="phone" name="phone" placeholder="Телефон" required>
                                 <span>Телефон</span>
                             </label>
-                        <label>
+                            <label>
                                 <input id="email" type="email" name="email" placeholder="Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
                                 <span>Email</span>
-                        </label>
-                        <label>
-                            <input id="time" class="date-picker" data-provide="datepicker" placeholder="Время" required data-date-format="dd/mm/yyyy">
-                            <span>Время</span>
-                        </label>
-
-                        <div id="reservationBody"></div>
-
-                        <input id="btnOrder" class="box-content-button" type="submit" value="Бронировать">
-                    </form>
+                            </label>
+                            <label>
+                                <input id="time" class="date-picker" data-provide="datepicker" placeholder="Время" required data-date-format="dd/mm/yyyy">
+                                <span>Время</span>
+                            </label>
+                            <div id="reservationBody"></div>
+                        </form>
+                    </div>
+                    <div class="uk-modal-footer uk-text-right">
+                        <button id="btnOrder" class="box-content-button" type="submit" value="Бронировать">Бронировать</button>
+                    </div>
                 </div>
             </div>
-
         </section>
 
         <section id="gallery" class="center slider" uk-grid uk-lightbox="animation: scale">
@@ -329,7 +344,8 @@
             <div id="rev4" class="review-content">
                 <img src="image/thumbs/9th.jpg" class="img-circle">
                 <blockquote>
-                    Первый наш квест и нам очень понравилось. Все было продумано, загадки в меру сложные, ловушки срабатывали на ура. Саша оооооочень приветлива и добра. После квеста остались хорошие эмоции :) Привили любовь к квестам :)
+                    Первый наш квест и нам очень понравилось. Все было продумано, загадки в меру сложные, ловушки срабатывали на ура. Саша оооооочень
+                    приветлива и добра. После квеста остались хорошие эмоции :) Привили любовь к квестам :)
                     <footer>
                         -
                         <cite>Дружина</cite>
@@ -339,7 +355,8 @@
             <div id="rev5" class="review-content">
                 <img src="image/thumbs/2th.jpg" class="img-circle">
                 <blockquote>
-                    Этот квест обеспечил нам классное настроение на несколько дней вперед. Ребята с большой фантазией подошли к вопросу, получилось ярко, смешно и здорово. Просто ловишь кайф от каждой минуты прозождения.
+                    Этот квест обеспечил нам классное настроение на несколько дней вперед. Ребята с большой фантазией подошли к вопросу, получилось
+                    ярко, смешно и здорово. Просто ловишь кайф от каждой минуты прозождения.
                     <footer>
                         -
                         <cite>Медведи</cite>
@@ -349,7 +366,8 @@
             <div id="rev6" class="review-content">
                 <img src="image/thumbs/17th.jpg" class="img-circle">
                 <blockquote>
-                    Классный квест. Задания заданиями(не, они хорошие, ничего не хотим сказать), но абсолютно покорил антураж. От первой до последней комнаты: красиво, атмосферно и завораживает. Проходили давно, но помним каждую деталь.
+                    Классный квест. Задания заданиями(не, они хорошие, ничего не хотим сказать), но абсолютно покорил антураж. От первой до последней
+                    комнаты: красиво, атмосферно и завораживает. Проходили давно, но помним каждую деталь.
                     <footer>
                         -
                         <cite>Адреналин</cite>
@@ -415,56 +433,81 @@
 
                         <div class="uk-modal-body" uk-overflow-auto>
 
-                            <p> Квест-комната – это новое веяние в мире семейного отдыха и дружеских развлечений. Последнее время такой вид досуга набирает всё больший интерес у людей, которые любят весело и интересно провести время, забыть обо всех заботах,
-                                которые остаются снаружи в тот момент, когда они заходят в «комнату» и за ними закрывается дверь. Сеть квест-комнат «Лабиринты» представляет Вашему вниманию приключения с интересными загадками и головоломками, незабываемый
-                                антураж (ведь мы хотим не просто закрыть Вас в комнате, но и чтоб Вы погрузились в абсолютно другой мир, в другую жизнь, иногда и в другое время), а так же незабываемые впечатления и эмоции после прохождение квеста.
+                            <p> Квест-комната – это новое веяние в мире семейного отдыха и дружеских развлечений. Последнее время
+                                такой вид досуга набирает всё больший интерес у людей, которые любят весело и интересно провести
+                                время, забыть обо всех заботах, которые остаются снаружи в тот момент, когда они заходят
+                                в «комнату» и за ними закрывается дверь. Сеть квест-комнат «Лабиринты» представляет Вашему
+                                вниманию приключения с интересными загадками и головоломками, незабываемый антураж (ведь
+                                мы хотим не просто закрыть Вас в комнате, но и чтоб Вы погрузились в абсолютно другой мир,
+                                в другую жизнь, иногда и в другое время), а так же незабываемые впечатления и эмоции после
+                                прохождение квеста.
                             </p>
 
-                            <p>Если вы хотите создать свой бизнес в данном сегменте, то у вас два варианта: открыть квест-комнату самостоятельно и пройти весь тернистый путь от написания сценария до раскрутки сайта самому, или приобрести франшизу, быстро
-                                открыться и начать получать доход.
+                            <p>Если вы хотите создать свой бизнес в данном сегменте, то у вас два варианта: открыть квест-комнату
+                                самостоятельно и пройти весь тернистый путь от написания сценария до раскрутки сайта самому,
+                                или приобрести франшизу, быстро открыться и начать получать доход.
                             </p>
 
                             <p>
                                 <div class="h4">Расходы на открытие квест-комнаты</div>
-                                Большая часть затрат, связанных с запуском проекта – это аренда и ремонт помещения, изготовление специального реквизита на заданную тему. Подробнее об этом вас проконсультируют наши специалисты.
+                                Большая часть затрат, связанных с запуском проекта – это аренда и ремонт помещения, изготовление специального реквизита на
+                                заданную тему. Подробнее об этом вас проконсультируют наши специалисты.
                             </p>
 
                             <p>
                                 <div class="h4">Ежемесячные расходы</div>
-                                Текущие расходы минимальны и значительную часть из них составляет плата за аренду, заработная плата операторам (1-2 человека на комнату), коммунальные платежи.
+                                Текущие расходы минимальны и значительную часть из них составляет плата за аренду, заработная плата операторам (1-2 человека
+                                на комнату), коммунальные платежи.
                             </p>
 
                             <p>
                                 <div class="h4">Срок окупаемости</div>
-                                Как правило, срок окупаемости квест-комнаты составляет не более полугода, при средней посещаемости 100-150 команд в месяц. Более точные данные можно получить, имея исходные данные: стоимость аренды, зарплата, накладные расходы.
+                                Как правило, срок окупаемости квест-комнаты составляет не более полугода, при средней посещаемости 100-150 команд в месяц.
+                                Более точные данные можно получить, имея исходные данные: стоимость аренды, зарплата, накладные
+                                расходы.
                             </p>
 
                             <p>
                                 <div class="h4">Каковы преимущества получения франшизы?</div>
-                                Франчайзинг – это возможность начать свой бизнес на основе уже работающей и приносящей прибыль бизнес-модели. Компания-франчайзер (в данном случае Quest Time) передаёт своим партнёрам (франчайзи) права на её использование, а также оказывает консультативные
-                                услуги, которые помогут становлению и развитию вашего бизнеса.
+                                Франчайзинг – это возможность начать свой бизнес на основе уже работающей и приносящей прибыль бизнес-модели. Компания-франчайзер
+                                (в данном случае Quest Time) передаёт своим партнёрам (франчайзи) права на её использование,
+                                а также оказывает консультативные услуги, которые помогут становлению и развитию вашего бизнеса.
                             </p>
 
                             <p>
-                                Франчайзи предоставляется бренд и возможность обучиться методам ведения бизнеса, за что он платит паушальный взнос и роялти. Перечислим основные преимущества, которые получает наш партнёр:
+                                Франчайзи предоставляется бренд и возможность обучиться методам ведения бизнеса, за что он платит паушальный взнос и роялти.
+                                Перечислим основные преимущества, которые получает наш партнёр:
                                 <ul>
-                                    <li>Вы приобретаете франшизу на работающий бизнес, с уже разработанным бизнес-планом квест-комнаты, расходной сметой, рекомендациями по созданию своего квеста, подбору помещения, реквизитов, кадров, проведению рекламных
-                                        компаний, что существенно повышает эффективность вашей работы и снижает риски. Согласно статистике, только 30% компаний начинающих свой бизнес самостоятельно остаются на рынке. С франчайзингом их количество возрастает
+                                    <li>Вы приобретаете франшизу на работающий бизнес, с уже разработанным бизнес-планом квест-комнаты,
+                                        расходной сметой, рекомендациями по созданию своего квеста, подбору помещения, реквизитов,
+                                        кадров, проведению рекламных компаний, что существенно повышает эффективность вашей
+                                        работы и снижает риски. Согласно статистике, только 30% компаний начинающих свой
+                                        бизнес самостоятельно остаются на рынке. С франчайзингом их количество возрастает
                                         до 80%.</li>
-                                    <li>Экономия на маркетинговых мероприятиях и рекламе. Покупая франшизу, вы не только получаете всеобъемлющую поддержку, но и работаете под нашим брендом, который хорошо зарекомендовал себя, пользуется популярностью у потребителя.</li>
-                                    <li>Для того чтобы добиться успеха работая по франшизе, достаточно быть хорошим управленцем. Все креативные вопросы решают наши профессионалы.</li>
-                                    <li>У начинающих бизнесменов всегда возникают сложности с планированием. При покупке франшизы предусмотреть все расходы и доходы можно пользуясь опытом других франчайзи, которые уже работают в этой сфере.</li>
-                                    <li>Вам не потребуется исследовать и анализировать рынок в вашем городе. Вся забота об этом ложится на плечи франчайзера. Это немаловажное преимущество, которое отличает бизнес по франшизе от начала своего дела «с чистого
-                                        листа».
+                                    <li>Экономия на маркетинговых мероприятиях и рекламе. Покупая франшизу, вы не только получаете
+                                        всеобъемлющую поддержку, но и работаете под нашим брендом, который хорошо зарекомендовал
+                                        себя, пользуется популярностью у потребителя.</li>
+                                    <li>Для того чтобы добиться успеха работая по франшизе, достаточно быть хорошим управленцем.
+                                        Все креативные вопросы решают наши профессионалы.</li>
+                                    <li>У начинающих бизнесменов всегда возникают сложности с планированием. При покупке франшизы
+                                        предусмотреть все расходы и доходы можно пользуясь опытом других франчайзи, которые
+                                        уже работают в этой сфере.</li>
+                                    <li>Вам не потребуется исследовать и анализировать рынок в вашем городе. Вся забота об этом
+                                        ложится на плечи франчайзера. Это немаловажное преимущество, которое отличает бизнес
+                                        по франшизе от начала своего дела «с чистого листа».
                                     </li>
                                     <li>К вашим услугам наш фирменный стиль, макеты полиграфической продукции.</li>
-                                    <li>Вы можете рассчитывать на полноценное сопровождение наших специалистов. Это возможность в любое время получить профессиональную консультацию касательно написания сценариев, созданию реквизитов для квеста.</li>
+                                    <li>Вы можете рассчитывать на полноценное сопровождение наших специалистов. Это возможность
+                                        в любое время получить профессиональную консультацию касательно написания сценариев,
+                                        созданию реквизитов для квеста.</li>
                                     <li>Мы окажем помощь в обучении операторов, посодействуем в организации их работы.</li>
                                 </ul>
                             </p>
                             <p>
-                                По всем вопросам, касающимся покупки франшизы квест-комнаты в любом городе Украины, обращайтесь к нашим специалистам по указанным на сайте контактным телефонам. Вы получите полноценную консультацию, узнаете сколько стоит франшиза квест рум, какие услуги
-                                входят в её стоимость. Наше предложение – это лучшая цена и быстрый старт!
+                                По всем вопросам, касающимся покупки франшизы квест-комнаты в любом городе Украины, обращайтесь к нашим специалистам по указанным
+                                на сайте контактным телефонам. Вы получите полноценную консультацию, узнаете сколько стоит
+                                франшиза квест рум, какие услуги входят в её стоимость. Наше предложение – это лучшая цена
+                                и быстрый старт!
                             </p>
                         </div>
 
@@ -481,7 +524,7 @@
 
 
     <script>
-        $(document).on('ready', function() {
+        $(document).on('ready', function () {
             $(".center").slick({
                 centerMode: true,
                 slidesToShow: 5,
@@ -496,10 +539,12 @@
             });
 
             $("#phone").inputmask("+380(99)99-99-999");
+            $(".date-picker").keydown(false);
+            $(".date-picker").prop('readonly', true);
         });
 
 
-        $("button[data-content]").click(function() {
+        $("button[data-content]").click(function () {
             $("#orderingRoomTitle").text($(this).data("content"));
             $("#reservationBody").html("");
             $("#time").val('');
@@ -510,12 +555,12 @@
             startDate: '-3d',
         });
 
-        $("#btnOrder").click(function() {
+        $("#btnOrder").click(function () {
 
         });
 
         var selectOrderButton;
-        $('.date-picker').change(function() {
+        $('.date-picker').change(function () {
 
             var selectRoom = $("#orderingRoomTitle").text();
             var selectDate = $(this).val();
@@ -535,22 +580,22 @@
                 'СБ'
             ];
             var week = gsDayNames[d.getDay()];
-
-            firebase.database().ref('rooms/' + selectRoom + '/Заказы/Расписание/' + week).once('value').then(function(snapshot) {
+            firebase.auth().signInAnonymously();
+            firebase.database().ref('rooms/' + selectRoom + '/Заказы/Расписание/' + week).once('value').then(function (snapshot) {
                 if (snapshot.key != null && snapshot.val() != null) {
                     console.log(snapshot.key + '-' + snapshot.val());
 
                     $("#reservationBody").html("");
 
-                    snapshot.forEach(function(item) {
+                    snapshot.forEach(function (item) {
                         console.log(snapshot.child(item.key).key + "-" + snapshot.child(item.key).val());
 
                         var button = document.createElement("button");
                         button.innerHTML = snapshot.child(item.key).key + '<br/>' + snapshot.child(item.key).val() + "₴";
                         button.setAttribute('class', 'box-content-button');
 
-                        firebase.database().ref('rooms/' + selectRoom + '/Заказы/Бронь/' + day + ' ' + mounth + ' ' + year).once('value').then(function(snapshot2) {
-                            snapshot2.forEach(function(item2) {
+                        firebase.database().ref('rooms/' + selectRoom + '/Заказы/Бронь/' + day + ' ' + mounth + ' ' + year).once('value').then(function (snapshot2) {
+                            snapshot2.forEach(function (item2) {
                                 if (snapshot.child(item.key).key == item2.key) {
                                     button.style.backgroundColor = '#555555';
                                     button.disabled = true;
@@ -558,7 +603,7 @@
                             });
                         });
 
-                        button.addEventListener("click", function() {
+                        button.addEventListener("click", function () {
                             if (selectOrderButton != undefined) {
                                 selectOrderButton.style.backgroundColor = '#81B841';
                             }
