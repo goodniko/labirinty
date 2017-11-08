@@ -579,21 +579,22 @@
                                 if (snapshot.child(item.key).key == item2.key) {
                                     button.style.backgroundColor = '#555555';
                                     button.disabled = true;
+                                } else {
+                                    button.addEventListener("click", function() {
+                                        if (selectOrderButton != undefined) {
+                                            selectOrderButton.style.backgroundColor = '#81B841';
+                                        }
+
+                                        var time = this.innerHTML;
+                                        selectOrderButton = this;
+
+                                        this.style.backgroundColor = '#FFA000';
+
+                                    });
                                 }
                             });
                         });
 
-                        button.addEventListener("click", function() {
-                            if (selectOrderButton != undefined) {
-                                selectOrderButton.style.backgroundColor = '#81B841';
-                            }
-
-                            var time = this.innerHTML;
-                            selectOrderButton = this;
-
-                            this.style.backgroundColor = '#FFA000';
-
-                        });
 
                         $("#reservationBody").append(button);
                     });
