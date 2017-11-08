@@ -260,6 +260,10 @@ header {
         right: 32px;
         top: 45px;
     }
+    .footer .footer-content-left {
+        flex-direction: column;
+    }
+
 }
 
 @media screen and (width: 375px) {
@@ -933,16 +937,24 @@ button:focus {
     text-decoration-skip: ink;
     text-decoration-color: rgba(255, 255, 255, .7);
 }
-
+.footer .footer-content-left {
+    display: flex;
+    flex-direction: row;
+}
 .footer .footer-content-left img {
     margin: 10px;
-    height: 70px;
+    height: 80px;
 }
 
 .footer .footer-content-right div:first-child {
     font-weight: 700;
 }
 
+@media screen and (max-width: 400px) {
+    .footer .footer-content-left {
+        flex-direction: column;
+    }
+}
 
 /* Franchise modal 
 ================================================================*/
@@ -1305,7 +1317,7 @@ form label input.populated+span {
         align-self: center;
     }
     .footer .footer-content-left img {
-        margin: 20px;
+        margin: 0 10px 10px;
     }
     .footer .footer-content-right {
         white-space: nowrap;
