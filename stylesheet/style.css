@@ -1353,7 +1353,10 @@ form label input.populated+span {
         justify-content: space-between;
     }
     .footer .footer-content-left img {
-        margin: 10px 70px 10px 10px;
+        margin: 10px;
+    }
+    .footer .footer-content-left {
+        flex-direction: row;
     }
     .box .description {
         display: flex;
