@@ -230,7 +230,7 @@
                                 <span>Телефон</span>
                             </label>
                             <label>
-                                <input id="email" type="email" name="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+                                <input id="mail" type="email" name="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
                                 <span>Email</span>
                             </label>
                             <label>
@@ -608,6 +608,17 @@
             var mail = $("#mail").val();
             var time = $("#time").val();
 
+            var time = selectOrderButton.innerHTML.split('<br>')[0];
+            var price = selectOrderButton.innerHTML.split('<br>')[1];
+
+            var message =
+                '<h1>Квест-комната: "' + selectRoom + '"</h1><br>' +
+                '<b>Время: </b>' + day + '.' + mounth + '.' + year + ', ' + time + '<br>' +
+                '<b>Цена: </b>' + price + '<br>' +
+                '<b>ФИО: </b>' + fio + '<br>' +
+                '<b>Телефон: </b>' + phone + '<br>' +
+                '<b>Почта: </b>' + mail;
+
             if (selectOrderButton == undefined || fio == "" || phone == "" || mail == "" || time == "") {
                 $('body').click(false);
                 swal({
@@ -620,10 +631,31 @@
                 return;
             }
 
-            var time = selectOrderButton.innerHTML.split('<br>')[0];
-            var price = selectOrderButton.innerHTML.split('<br>')[1];
+            firebase.database().ref('rooms/' + selectRoom + '/Заказы/Бронь/' + day + ' ' + mounth + ' ' + year + '/' + selectOrderButton.innerHTML.substring(0, 5)).update({
+                "ФИО": fio,
+                "Телефон": phone
+            });
 
-            debugger;
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'http://questme.com.ua/send-email.php', true);
+            xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+            xhr.onload = function() {
+                console.log(this.responseText);
+            };
+            xhr.send('to=' + escape(mail) + '&message=' + message);
+
+            if (selectRoom == "Тайна джунглей") {
+                var xhrForAdmin = new XMLHttpRequest();
+                xhrForAdmin.open('POST', 'http://questme.com.ua/send-email.php', true);
+                xhrForAdmin.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                xhrForAdmin.send('to=' + escape('gooodniko@gmail.com') + '&message=' + message);
+            } else if (selectRoom == "Храм Солнца") {
+                var xhrForAdmin = new XMLHttpRequest();
+                xhrForAdmin.open('POST', 'http://questme.com.ua/send-email.php', true);
+                xhrForAdmin.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                xhrForAdmin.send('to=' + escape('Hramsolnca.od@gmail.com') + '&message=' + message);
+            }
+
             swal({
                 title: "Забронировано",
                 text: selectRoom + ': ' + day + '/' + mounth + '/' + year + " " + time + ' ' + price,
