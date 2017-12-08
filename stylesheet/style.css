@@ -19,11 +19,12 @@ ul {
     -webkit-margin-after: 0;
 }
 
-.header,
-.footer {
+.header {
     background: url('../image/menu-theme.png') #81b341 center center no-repeat;
 }
-
+.footer {
+    background: url('../image/menu-theme.png') #81b341 top center no-repeat;
+}
 
 /* Header & Menu 
 ================================================*/
@@ -362,6 +363,8 @@ button:focus {
 .box .box-img {
     transform: rotateY(0);
     transition: all 0.50s ease-in-out 0s;
+    max-width: 400px;
+    min-width: 300px;
 }
 
 .box:hover .box-img {
@@ -1279,20 +1282,13 @@ form label input.populated+span {
     .box {
         margin-top: 20px;
     }
-    #review {
-        margin: 20px 10px -40px;
-    }
     .review-content {
         width: 270px;
     }
     .review-content blockquote {
-        width: 270px;
         height: auto;
     }
-
     .footer {
-        position: relative;
-        bottom: -60px;
         line-height: 15px;
         padding: 10px 0px 0px;
         align-items: center;
